@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>speedy-llama-alexa-skills</groupId>
   <artifactId>mta-status</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>1.0</version>
   <name>MTA Status Alexa Skill</name>
 
