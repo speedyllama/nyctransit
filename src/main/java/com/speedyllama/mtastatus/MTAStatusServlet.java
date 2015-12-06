@@ -2,7 +2,6 @@ package com.speedyllama.mtastatus;
 
 import javax.servlet.ServletException;
 
-import com.amazon.speech.speechlet.Speechlet;
 import com.amazon.speech.speechlet.servlet.SpeechletServlet;
 
 public class MTAStatusServlet extends SpeechletServlet {

@@ -1,5 +1,8 @@
 package com.speedyllama.mtastatus;
 
+import java.util.List;
+import java.util.Map;
+
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.LaunchRequest;
 import com.amazon.speech.speechlet.Session;
@@ -14,7 +17,32 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
-		return responseText("on intent");
+		StatusParser parser = new StatusParser(new PlainXMLFetcher(), "http://web.mta.info/status/serviceStatus.txt");
+		try {
+			Map<String, List<StatusParser.Alert>> alerts = parser.parse();
+			
+			String train = request.getIntent().getSlot("Train").getValue();
+			if ("one".equalsIgnoreCase(train)) {
+				train = "1";
+			} if ("two".equalsIgnoreCase(train)) {
+				train = "2";
+			} if ("three".equalsIgnoreCase(train)) {
+				train = "3";
+			} if ("four".equalsIgnoreCase(train)) {
+				train = "4";
+			} if ("five".equalsIgnoreCase(train)) {
+				train = "5";
+			} if ("six".equalsIgnoreCase(train)) {
+				train = "6";
+			} if ("seven".equalsIgnoreCase(train)) {
+				train = "7";
+			}
+			
+			String text = alerts.get(train).get(0).title;
+			return responseText(text);
+		} catch (MTAStatusException e) {
+			throw new SpeechletException(e);
+		}
 	}
 
 	@Override
