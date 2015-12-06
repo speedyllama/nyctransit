@@ -30,7 +30,7 @@
 
     <servlet-mapping>
       <servlet-name>alexa</servlet-name>
-      <url-pattern>/api/nyctransitstatus/alexa</url-pattern>
+      <url-pattern>/alexa</url-pattern>
     </servlet-mapping>
 
     <session-config>
