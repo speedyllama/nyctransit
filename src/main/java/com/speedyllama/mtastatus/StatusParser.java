@@ -69,7 +69,7 @@ public class StatusParser {
     	this.fetcher = fetcher;
     	this.url = url;
     }
-    public Map<String, List<Alert>> parse() throws MTAStatusException {
+    public Map<String, String> parse() throws MTAStatusException {
     	InputStream rawXMLStream = fetcher.fetchXML(url);
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -92,21 +92,7 @@ public class StatusParser {
                     String statusInXML = lineElem.getElementsByTagName("status").item(0).getTextContent();
                     String text = lineElem.getElementsByTagName("text").item(0).getTextContent();
                     
-                    if ("GOOD SERVICE".equalsIgnoreCase(statusInXML)) {
-                        List<String> linesInName = new ArrayList<String>();
-                        if ("SIR".equals(name)) {
-                            linesInName.add(name);
-                        } else {
-                            for (String lineInName : name.split("")) {
-                                linesInName.add(lineInName);
-                            }
-                        }
-
-                        for (String lineInName : linesInName) {
-                            Alert alert = new Alert(timestamp, lineInName, statusInXML);
-                            addAlert(alert, alertsOfTimestamp);
-                        }
-                    } else { // Not Good Service. Let's parse.
+                    if (!"GOOD SERVICE".equalsIgnoreCase(statusInXML)) {
                         List<Alert> alerts = parseText(text);
                         for (Alert tmpAlert : alerts) {
                             String title = tmpAlert.title;
@@ -125,7 +111,21 @@ public class StatusParser {
                  }
             }
             
-            return alertsOfTimestamp;
+            Map<String, String> statusMap = new HashMap<String, String>();
+            for (String trainKey : LINES.split("\\|")) {
+            	List<Alert> alerts = alertsOfTimestamp.get(trainKey);
+            	if (alerts != null && !alerts.isEmpty()) {
+            		StringBuilder builder = new StringBuilder();
+            		builder.append(trainKey + " train's status is " + alerts.get(0).status + ". ");
+            		for (Alert alert : alerts) {
+            			builder.append(alert.title).append(". ").append(alert.detail).append(".");
+            		}
+            		statusMap.put(trainKey, builder.toString());
+            	} else {
+            		statusMap.put(trainKey, trainKey + " is in good service.");
+            	}
+            }
+            return statusMap;
         } catch (IOException ie) {
         	throw new MTAStatusException(ie);
         } catch (ParserConfigurationException pe) {

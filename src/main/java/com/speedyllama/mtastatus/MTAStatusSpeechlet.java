@@ -19,7 +19,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
 		StatusParser parser = new StatusParser(new PlainXMLFetcher(), "http://web.mta.info/status/serviceStatus.txt");
 		try {
-			Map<String, List<StatusParser.Alert>> alerts = parser.parse();
+			Map<String, String> statusMap = parser.parse();
 			
 			String train = request.getIntent().getSlot("Train").getValue();
 			if ("one".equalsIgnoreCase(train)) {
@@ -38,8 +38,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 				train = "7";
 			}
 			
-			String text = alerts.get(train).get(0).title;
-			return responseText(text);
+			return responseText(statusMap.get(train));
 		} catch (MTAStatusException e) {
 			throw new SpeechletException(e);
 		}
