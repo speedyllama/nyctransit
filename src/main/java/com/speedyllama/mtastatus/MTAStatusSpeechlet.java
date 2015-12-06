@@ -14,12 +14,12 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
-		return responseText("onIntent");
+		return responseText("on intent");
 	}
 
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		return responseText("onLaunch");
+		return responseText("on launch");
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	protected SpeechletResponse responseText(String text) {
 		PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
-		speech.setText("text");
+		speech.setText(text);
 		SpeechletResponse response = new SpeechletResponse();
 		response.setOutputSpeech(speech);
 		return response;
