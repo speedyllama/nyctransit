@@ -122,15 +122,7 @@ public class StatusParser {
             		}
             		statusMap.put(trainKey, builder.toString());
             	} else {
-            		// For Alexa to pronounce the train better: add a dot after a alphabet train.
-            		String trainCall;
-            		try {
-            			Integer.parseInt(trainKey);
-            			trainCall = trainKey;
-            		} catch (NumberFormatException nfe) {
-            			trainCall = trainKey + ". ";
-            		}
-            		statusMap.put(trainKey, trainCall + " train is in good service.");
+            		statusMap.put(trainKey, trainKey + "-train is in good service.");
             	}
             }
             return statusMap;
