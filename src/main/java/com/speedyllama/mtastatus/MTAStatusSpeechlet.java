@@ -1,6 +1,5 @@
 package com.speedyllama.mtastatus;
 
-import java.util.List;
 import java.util.Map;
 
 import com.amazon.speech.speechlet.IntentRequest;
@@ -24,24 +23,28 @@ public class MTAStatusSpeechlet implements Speechlet {
 			String train = request.getIntent().getSlot("Train").getValue();
 			if ("one".equalsIgnoreCase(train)) {
 				train = "1";
-			} if ("two".equalsIgnoreCase(train)) {
+			} else if ("two".equalsIgnoreCase(train)) {
 				train = "2";
-			} if ("three".equalsIgnoreCase(train)) {
+			} else if ("three".equalsIgnoreCase(train)) {
 				train = "3";
-			} if ("four".equalsIgnoreCase(train)) {
+			} else if ("four".equalsIgnoreCase(train)) {
 				train = "4";
-			} if ("five".equalsIgnoreCase(train)) {
+			} else if ("five".equalsIgnoreCase(train)) {
 				train = "5";
-			} if ("six".equalsIgnoreCase(train)) {
+			} else if ("six".equalsIgnoreCase(train)) {
 				train = "6";
-			} if ("seven".equalsIgnoreCase(train)) {
+			} else if ("seven".equalsIgnoreCase(train)) {
 				train = "7";
+			} else if (train != null && !train.isEmpty()) {
+				// Take the first character from the word.
+				train = train.substring(0, 1).toUpperCase();
+			} else {
+				return responseText("Sorry, there is a problem understanding which train you want to ask about.");
 			}
 
-			train = train.toUpperCase();
 			String status = statusMap.get(train);
 			if (status == null || status.isEmpty()) {
-				return responseText("New York City transit does not have " + train + "train.");
+				return responseText("New York City transit does not have " + train + ". train.");
 			} else {
 				return responseText(statusMap.get(train));
 			}

@@ -122,7 +122,7 @@ public class StatusParser {
             		}
             		statusMap.put(trainKey, builder.toString());
             	} else {
-            		statusMap.put(trainKey, trainKey + " train is in good service.");
+            		statusMap.put(trainKey, trainKey + ". train is in good service.");
             	}
             }
             return statusMap;
