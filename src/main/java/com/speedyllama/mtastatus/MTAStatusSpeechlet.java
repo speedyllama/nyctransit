@@ -39,8 +39,12 @@ public class MTAStatusSpeechlet implements Speechlet {
 			}
 
 			train = train.toUpperCase();
-			
-			return responseText(statusMap.get(train));
+			String status = statusMap.get(train);
+			if (status == null || status.isEmpty()) {
+				return responseText("New York City transit does not have " + train + "train.");
+			} else {
+				return responseText(statusMap.get(train));
+			}
 		} catch (MTAStatusException e) {
 			throw new SpeechletException(e);
 		}
