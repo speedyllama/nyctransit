@@ -37,6 +37,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 			} if ("seven".equalsIgnoreCase(train)) {
 				train = "7";
 			}
+
+			train = train.toUpperCase();
 			
 			return responseText(statusMap.get(train));
 		} catch (MTAStatusException e) {
