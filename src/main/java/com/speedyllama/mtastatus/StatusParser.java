@@ -25,7 +25,7 @@ import org.xml.sax.SAXException;
 
 public class StatusParser {
     private static final String DELIM = "\t";
-    private static String LINES = "1|2|3|4|5|6|7|8|9|A|C|E|B|D|E|M|G|J|Z|L|N|Q|R|S|SIR";
+    private static String LINES = "1|2|3|4|5|6|7|8|9|A|C|E|B|D|F|M|G|J|Z|L|N|Q|R|S|SIR";
     
     private XMLFetcher fetcher;
     private String url;
