@@ -204,7 +204,7 @@ public class StatusParser {
             return singleTitles;
         }
         
-        // Check if there are really multiple lines. Some statements are "fake".
+        // Check if there are really multiple lines. Some statements are "fake" multiples.
         if (lines.size() >= 2) {
             boolean isMultipleLines = true;
             if (!"DELAYS".equals(status)) { // Don't check delays. They are not split.
