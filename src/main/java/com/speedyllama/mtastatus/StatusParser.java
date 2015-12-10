@@ -24,46 +24,10 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class StatusParser {
-    private static final String DELIM = "\t";
-    private static String LINES = "1|2|3|4|5|6|7|8|9|A|C|E|B|D|F|M|G|J|Z|L|N|Q|R|S|SIR";
     
     private XMLFetcher fetcher;
     private String url;
     
-    public static class Alert {
-        public String timestamp, line, status, title, detail;
-
-        public Alert(String timestamp, String line, String status, String title, String detail) {
-            this.timestamp = timestamp;
-            this.line = line;
-            this.status = status;
-            this.title = title;
-            this.detail = detail;
-        }
-        
-        public Alert(String timestamp, String line, String status) {
-            this(timestamp, line, status, "", "");
-        }
-        
-        public Alert() {}
-
-        @Override
-        public String toString() {
-            return timestamp + DELIM + line + DELIM + status + DELIM + title + DELIM + detail;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (!(obj instanceof Alert)) {
-                return false;
-            }
-            Alert other = (Alert)obj;
-            return other.line.equals(line) &&
-                    other.status.equals(status) &&
-                    other.title.equals(title) &&
-                    other.detail.equals(detail);
-        }
-    }
 
     public StatusParser(XMLFetcher fetcher, String url) {
     	this.fetcher = fetcher;
@@ -112,7 +76,7 @@ public class StatusParser {
             }
             
             Map<String, String> statusMap = new HashMap<String, String>();
-            for (String trainKey : LINES.split("\\|")) {
+            for (String trainKey : Constants.LINES.split("\\|")) {
             	List<Alert> alerts = alertsOfTimestamp.get(trainKey);
             	if (alerts != null && !alerts.isEmpty()) {
             		StringBuilder builder = new StringBuilder();
@@ -206,7 +170,7 @@ public class StatusParser {
         return alerts;
     }
     
-    private static Pattern LINES_PATTERN = Pattern.compile("\\[(" + LINES + ")\\]");
+    private static Pattern LINES_PATTERN = Pattern.compile("\\[(" + Constants.LINES + ")\\]");
     private static String[] NOT_MULTIPLE_LINES_PATTERN = {
         "provide alternate service",
         "via",
