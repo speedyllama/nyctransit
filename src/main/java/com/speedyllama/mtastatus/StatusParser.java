@@ -33,6 +33,7 @@ public class StatusParser {
     	this.fetcher = fetcher;
     	this.url = url;
     }
+
     public Map<String, String> parse() throws MTAStatusException {
     	InputStream rawXMLStream = fetcher.fetchXML(url);
 
@@ -101,7 +102,7 @@ public class StatusParser {
         }
     }
     
-    private static void addAlert(Alert alert, Map<String, List<Alert>> alertsOfTimestamp) {
+    private void addAlert(Alert alert, Map<String, List<Alert>> alertsOfTimestamp) {
         List<Alert> alerts = alertsOfTimestamp.get(alert.line);
         if (alerts == null) {
             alerts = new ArrayList<Alert>();
