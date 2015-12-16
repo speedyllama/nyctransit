@@ -1,7 +1,6 @@
 package com.speedyllama.mtastatus;
 
 import com.amazon.speech.slu.Intent;
-import com.amazon.speech.slu.Slot;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.LaunchRequest;
 import com.amazon.speech.speechlet.Session;
@@ -86,7 +85,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	protected SpeechletResponse responseDetailStatus(Intent intent, Session session) {
 		String train = (String)session.getAttribute("train");
 
-		String answer = intent.getSlot("answer").getValue().toLowerCase();
+		String answer = intent.getSlot("Answer").getValue().toLowerCase();
 		if (answer.startsWith("y") || 
 				answer.equals("ok") ||
 				answer.equals("go ahead")) {
