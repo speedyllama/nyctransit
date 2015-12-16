@@ -24,7 +24,10 @@ public class MTAStatusSpeechlet implements Speechlet {
 		String train = request.getIntent().getSlot("Train").getValue();
 		if ("one".equalsIgnoreCase(train)) {
 			train = "1";
-		} else if ("two".equalsIgnoreCase(train)) {
+		// Alexa is not smart one number "two".
+		} else if ("two".equalsIgnoreCase(train) ||
+				"to".equalsIgnoreCase(train) ||
+				"too".equalsIgnoreCase(train)) {
 			train = "2";
 		} else if ("three".equalsIgnoreCase(train)) {
 			train = "3";
