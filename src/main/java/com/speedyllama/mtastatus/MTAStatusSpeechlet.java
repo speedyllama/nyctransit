@@ -31,7 +31,9 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "2";
 		} else if ("three".equalsIgnoreCase(train)) {
 			train = "3";
-		} else if ("four".equalsIgnoreCase(train)) {
+		// Alexa is not smart one number "four".
+		} else if ("four".equalsIgnoreCase(train) || 
+				"for".equalsIgnoreCase(train)) {
 			train = "4";
 		} else if ("five".equalsIgnoreCase(train)) {
 			train = "5";
