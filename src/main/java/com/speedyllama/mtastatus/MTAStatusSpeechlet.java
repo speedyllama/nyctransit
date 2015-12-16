@@ -16,6 +16,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	public MTAStatusSpeechlet() {
 		this.currentStatus = new CurrentStatus(new PlainXMLFetcher(), new StatusParser(), Constants.STATUS_URL);
+		currentStatus.start();
 	}
 
 	@Override

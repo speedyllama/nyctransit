@@ -24,15 +24,21 @@ public class CurrentStatus {
 		return statusMap.get(line);
 	}
 	
-	public void start() throws MTAStatusException {
-		while (true) {
-			InputStream is = xmlFetcher.fetchXML(url);
-			statusMap = statusParser.parse(is);
-			try {
-				Thread.sleep(1000 * 60);
-			} catch (InterruptedException e) {
-				throw new MTAStatusException(e);
+	public void start() {
+		Thread thread = new Thread() {
+			public void run() {
+				InputStream is;
+				try {
+					is = xmlFetcher.fetchXML(url);
+					statusMap = statusParser.parse(is);
+					Thread.sleep(1000 * 60);
+				} catch (MTAStatusException mtae) {
+					System.err.println("Error fetching status map.");
+				} catch (InterruptedException ie) {
+					System.err.println("Cannot fall asleep.");
+				}
 			}
-		}
+		};
+		thread.start();
 	}
 }
