@@ -14,6 +14,15 @@ Intent Schema
           "type": "TRAIN"
         }
       ]
+    },
+    {
+      "intent": "QueryStatusDetail",
+      "slots": [
+        {
+          "name": "Answer",
+          "type": "LITERAL"
+        }
+      ]
     }
   ]
 }
@@ -54,3 +63,8 @@ zulu
 Sample Utterances
 -----------------
 QueryTrainStatus What is the status of {Train} train
+QueryTrainStatus {Train} train status
+QueryStatusDetail {yes|Answer}
+QueryStatusDetail {yeah|Answer}
+QueryStatusDetail {ok|Answer}
+QueryStatusDetail {go ahead|Answer}

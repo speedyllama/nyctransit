@@ -1,5 +1,7 @@
 package com.speedyllama.mtastatus;
 
+import com.amazon.speech.slu.Intent;
+import com.amazon.speech.slu.Slot;
 import com.amazon.speech.speechlet.IntentRequest;
 import com.amazon.speech.speechlet.LaunchRequest;
 import com.amazon.speech.speechlet.Session;
@@ -21,7 +23,19 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
-		String train = request.getIntent().getSlot("Train").getValue();
+		Intent intent = request.getIntent();
+		
+		if (Constants.INTENT_QUERY_TRAIN_STATUS.equals(intent.getName())) {
+			return responseShortStatus(intent, session);
+		} else if (Constants.INTENT_QUERY_STATUS_DETAIL.equals(intent.getName())) {
+			return responseDetailStatus(intent, session);
+		} else {
+			return responseText("Sorry, I didn't get it. Let's try again.");
+		}
+	}
+	
+	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
+		String train = intent.getSlot("Train").getValue();
 		if ("one".equalsIgnoreCase(train)) {
 			train = "1";
 		// Alexa is not smart one number "two".
@@ -61,10 +75,24 @@ public class MTAStatusSpeechlet implements Speechlet {
 			String detail = statusObj.getDetail();
 			if (detail != null && !detail.isEmpty()) {
 				responseText += "Do you want to hear details?";
+				session.setAttribute("train", train);
 				return responseText(responseText, false);
 			} else {
 				return responseText(responseText);
 			}
+		}
+	}
+	
+	protected SpeechletResponse responseDetailStatus(Intent intent, Session session) {
+		String train = (String)session.getAttribute("train");
+
+		String answer = intent.getSlot("answer").getValue().toLowerCase();
+		if (answer.startsWith("y") || 
+				answer.equals("ok") ||
+				answer.equals("go ahead")) {
+			return responseText(currentStatus.getStatus(train).getDetail());
+		} else {
+			return responseText("See you!");
 		}
 	}
 
