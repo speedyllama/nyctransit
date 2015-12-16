@@ -25,7 +25,7 @@ import org.xml.sax.SAXException;
 
 public class StatusParser {
 
-    public Map<String, String> parse(InputStream rawXMLStream) throws MTAStatusException {
+    public Map<String, Status> parse(InputStream rawXMLStream) throws MTAStatusException {
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -65,18 +65,28 @@ public class StatusParser {
                  }
             }
             
-            Map<String, String> statusMap = new HashMap<String, String>();
+            Map<String, Status> statusMap = new HashMap<String, Status>();
             for (String trainKey : Constants.LINES.split("\\|")) {
             	List<Alert> alerts = alertsOfTimestamp.get(trainKey);
             	if (alerts != null && !alerts.isEmpty()) {
+            		String status = trainKey + " train's status is " + alerts.get(0).status + ".";
             		StringBuilder builder = new StringBuilder();
-            		builder.append(trainKey + " train's status is " + alerts.get(0).status + ". ");
+            		for (Alert alert : alerts) {
+            			builder.append(alert.title).append(". ");
+            		}
+            		String title = builder.toString();
+
+            		builder = new StringBuilder();
             		for (Alert alert : alerts) {
             			builder.append(alert.title).append(". ").append(alert.detail).append(".");
             		}
-            		statusMap.put(trainKey, builder.toString());
+            		String detail = builder.toString();
+            		if (detail.trim().isEmpty()) {
+            			detail = null;
+            		}
+            		statusMap.put(trainKey, new Status(trainKey, status, title, detail));
             	} else {
-            		statusMap.put(trainKey, trainKey + "-train is in good service.");
+            		statusMap.put(trainKey, new Status(trainKey, trainKey + "-train is in good service.", null, null));
             	}
             }
             return statusMap;

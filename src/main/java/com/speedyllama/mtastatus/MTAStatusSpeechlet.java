@@ -48,11 +48,23 @@ public class MTAStatusSpeechlet implements Speechlet {
 			return responseText("Sorry, there is a problem understanding which train you want to ask about.");
 		}
 
-		String status = currentStatus.getStatus(train);
-		if (status == null || status.isEmpty()) {
+		Status statusObj = currentStatus.getStatus(train);
+		if (statusObj == null) {
 			return responseText("New York City transit does not have " + train + "-train.");
 		} else {
-			return responseText(status);
+			String responseText = statusObj.getStatus();
+			String title = statusObj.getTitle();
+			if (title != null) {
+				responseText += title;
+			}
+			
+			String detail = statusObj.getDetail();
+			if (detail != null && !detail.isEmpty()) {
+				responseText += "Do you want to hear details?";
+				return responseText(responseText, false);
+			} else {
+				return responseText(responseText);
+			}
 		}
 	}
 
@@ -71,11 +83,16 @@ public class MTAStatusSpeechlet implements Speechlet {
 		// TODO Auto-generated method stub
 	}
 
-	protected SpeechletResponse responseText(String text) {
+	protected SpeechletResponse responseText(String text, boolean shouldEndSession) {
 		PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
 		speech.setText(text);
 		SpeechletResponse response = new SpeechletResponse();
 		response.setOutputSpeech(speech);
+		response.setShouldEndSession(shouldEndSession);
 		return response;
+	}
+	
+	protected SpeechletResponse responseText(String text) {
+		return responseText(text, true);
 	}
 }

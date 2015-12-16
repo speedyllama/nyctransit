@@ -9,7 +9,7 @@ public class CurrentStatus {
     private StatusParser statusParser;
     private String url;
     
-    private Map<String, String> statusMap;
+    private Map<String, Status> statusMap;
 
 	public CurrentStatus(XMLFetcher xmlFetcher, StatusParser statusParser, String url) {
 		this.xmlFetcher = xmlFetcher;
@@ -17,7 +17,7 @@ public class CurrentStatus {
 		this.url = url;
 	}
 	
-	public String getStatus(String line) {
+	public Status getStatus(String line) {
 		if (statusMap == null) {
 			return null;
 		}
