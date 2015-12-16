@@ -24,19 +24,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class StatusParser {
-    
-    private XMLFetcher fetcher;
-    private String url;
-    
 
-    public StatusParser(XMLFetcher fetcher, String url) {
-    	this.fetcher = fetcher;
-    	this.url = url;
-    }
-
-    public Map<String, String> parse() throws MTAStatusException {
-    	InputStream rawXMLStream = fetcher.fetchXML(url);
-
+    public Map<String, String> parse(InputStream rawXMLStream) throws MTAStatusException {
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
