@@ -108,6 +108,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 						"Do you want to hear that again?"
 				, false);
 			} else {
+				session.setAttribute("nato", false);
 				return responseText("Please ask me subway status now. Like: What is the status of seven train?", false);
 			}
 		}
