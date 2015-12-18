@@ -97,7 +97,11 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		return responseText("on launch");
+		return responseText("Hi! You can ask me N.Y.C subway status. " + 
+				"Like: What is the status of seven train? " +
+				"For alphabetical trains, like A, C, E trains, use a real word instead. " +
+				"Like: What is the status of Echo train? NATO phonetic alphabets are recommended."
+		);
 	}
 
 	@Override
