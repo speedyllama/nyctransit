@@ -121,7 +121,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		session.setAttribute("nato", true);
 		return responseText("Hi! You can ask me N.Y.C subway status. " + 
 				"Like: What is the status of seven train? " +
-				"For alphabetical trains, like A, C, E trains, use a real word instead. " +
+				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
 				"Like: What is the status of Echo train? NATO phonetic alphabets are recommended." +
 				"Do you want to hear a list of NATO phonetic alphabets?"
 		, false);
