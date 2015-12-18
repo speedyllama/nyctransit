@@ -85,22 +85,22 @@ public class MTAStatusSpeechlet implements Speechlet {
 	protected SpeechletResponse responseDetailStatus(Intent intent, Session session) {
 		if (true == (boolean)session.getAttribute("nato")) {
 			return responseText(
-					"A for Alpha." + 
-					"B for Bravo." + 
-					"C for Charlie." + 
-					"D for Delta." + 
-					"E for Echo." + 
-					"F for Foxtrot." + 
-					"G for Golf." + 
-					"J for Juliette." + 
-					"L for Lima." + 
-					"M for Mike." + 
-					"N for November." + 
-					"Q for Quebec." + 
-					"R for Romeo." + 
-					"S for Sierra." + 
-					"Z for Zulu." + 
-					"Also, you may say Shuttle for S train"
+					"A for Alpha. " + 
+					"B for Bravo. " + 
+					"C for Charlie. " + 
+					"D for Delta. " + 
+					"E for Echo. " + 
+					"F for Foxtrot. " + 
+					"G for Golf. " + 
+					"J for Juliette. " + 
+					"L for Lima. " + 
+					"M for Mike. " + 
+					"N for November. " + 
+					"Q for Quebec. " + 
+					"R for Romeo. " + 
+					"S for Sierra. " + 
+					"Z for Zulu. " + 
+					"Also, you may say Shuttle for S train."
 			);
 		}
 
@@ -122,7 +122,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		return responseText("Hi! You can ask me N.Y.C subway status. " + 
 				"Like: What is the status of seven train? " +
 				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
-				"Like: What is the status of Echo train? NATO phonetic alphabets are recommended." +
+				"Like: What is the status of Echo train? NATO phonetic alphabets are recommended. " +
 				"Do you want to hear a list of NATO phonetic alphabets?"
 		, false);
 	}
