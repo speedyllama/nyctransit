@@ -86,37 +86,48 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	protected SpeechletResponse responseDetailStatus(Intent intent, Session session) {
 		if (true == (boolean)session.getAttribute("nato")) {
-			return responseText(
-					"A for Alpha. " + 
-					"B for Bravo. " + 
-					"C for Charlie. " + 
-					"D for Delta. " + 
-					"E for Echo. " + 
-					"F for Foxtrot. " + 
-					"G for Golf. " + 
-					"J for Juliette. " + 
-					"L for Lima. " + 
-					"M for Mike. " + 
-					"N for November. " + 
-					"Q for Quebec. " + 
-					"R for Romeo. " + 
-					"S for Sierra. " + 
-					"Z for Zulu. " + 
-					"Also, you may say Shuttle for S train. " + 
-					"Do you want to hear that again?"
-			, false);
+			if (isPositive(intent.getSlot("Answer").getValue())) {
+				return responseText(
+						"A for Alpha. " + 
+						"B for Bravo. " + 
+						"C for Charlie. " + 
+						"D for Delta. " + 
+						"E for Echo. " + 
+						"F for Foxtrot. " + 
+						"G for Golf. " + 
+						"J for Juliette. " + 
+						"L for Lima. " + 
+						"M for Mike. " + 
+						"N for November. " + 
+						"Q for Quebec. " + 
+						"R for Romeo. " + 
+						"S for Sierra. " + 
+						"Z for Zulu. " + 
+						"Also, you may say Shuttle for S train. " + 
+						"Do you want to hear that again?"
+				, false);
+			} else {
+				return responseText("Please ask me subway status now. Like: What is the status of seven train?", false);
+			}
 		}
 
 		String train = (String)session.getAttribute("train");
 
 		String answer = intent.getSlot("Answer").getValue().toLowerCase();
-		if (answer.startsWith("y") || 
-				answer.equals("ok") ||
-				answer.equals("go ahead")) {
+		if (isPositive(answer)) {
 			return responseText(currentStatus.getStatus(train).getDetail());
 		} else {
 			return responseText("See you!");
 		}
+	}
+	
+	private boolean isPositive(String answer) {
+		if (answer.startsWith("y") || 
+				answer.equals("ok") ||
+				answer.equals("go ahead")) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
