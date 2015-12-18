@@ -88,6 +88,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		if (true == (boolean)session.getAttribute("nato")) {
 			if (isPositive(intent.getSlot("Answer").getValue())) {
 				return responseText(
+						"Here are NATO phonetic alphabets. " + 
 						"A for Alpha. " + 
 						"B for Bravo. " + 
 						"C for Charlie. " + 
