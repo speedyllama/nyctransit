@@ -69,7 +69,7 @@ public class StatusParser {
             for (String trainKey : Constants.LINES.split("\\|")) {
             	List<Alert> alerts = alertsOfTimestamp.get(trainKey);
             	if (alerts != null && !alerts.isEmpty()) {
-            		String status = trainKey + " train's status is " + alerts.get(0).status + ".";
+            		TrainStatus status = TrainStatus.parse(alerts.get(0).status);
             		StringBuilder builder = new StringBuilder();
             		for (Alert alert : alerts) {
             			builder.append(alert.title).append(". ");
@@ -86,7 +86,7 @@ public class StatusParser {
             		}
             		statusMap.put(trainKey, new Status(trainKey, status, title, detail));
             	} else {
-            		statusMap.put(trainKey, new Status(trainKey, trainKey + "-train is in good service.", null, null));
+            		statusMap.put(trainKey, new Status(trainKey, TrainStatus.GOOD_SERVICE, null, null));
             	}
             }
             return statusMap;

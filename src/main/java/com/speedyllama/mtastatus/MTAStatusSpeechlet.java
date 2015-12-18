@@ -65,7 +65,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		if (statusObj == null) {
 			return responseText("New York City transit does not have " + train + "-train.");
 		} else {
-			String responseText = statusObj.getStatus();
+			String responseText = train + "-train is in " + statusObj.getStatus().toString() + ". . .";
 			String title = statusObj.getTitle();
 			if (title != null) {
 				responseText += title;

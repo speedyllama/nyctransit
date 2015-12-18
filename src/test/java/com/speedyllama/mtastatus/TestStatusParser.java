@@ -18,6 +18,6 @@ public class TestStatusParser {
 	@Test
 	public void test() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151217T2257.xml").toString()));
-		
+		assert(statusMap.get("1").getStatus() == TrainStatus.GOOD_SERVICE);
 	}
 }

@@ -1,9 +1,10 @@
 package com.speedyllama.mtastatus;
 
 public class Status {
-	private String line, status, title, detail;
+	private String line, title, detail;
+	private TrainStatus status;
 
-	public Status(String line, String status, String title, String detail) {
+	public Status(String line, TrainStatus status, String title, String detail) {
 		super();
 		this.status = status;
 		this.line = line;
@@ -15,7 +16,7 @@ public class Status {
 		return line;
 	}
 
-	public String getStatus() {
+	public TrainStatus getStatus() {
 		return status;
 	}
 
