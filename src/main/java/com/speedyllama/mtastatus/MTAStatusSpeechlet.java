@@ -58,7 +58,9 @@ public class MTAStatusSpeechlet implements Speechlet {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
 		} else {
-			return responseText("Sorry, there is a problem understanding which train you want to ask about.");
+			return responseText("Sorry, there is a problem understanding which train you want to ask about." +
+					"If you are asking about an alphabetical train, try use another word that begins with that alphabet. " + 
+					"Like: What is the status of Echo train?");
 		}
 
 		Status statusObj = currentStatus.getStatus(train);
@@ -100,8 +102,9 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"R for Romeo. " + 
 					"S for Sierra. " + 
 					"Z for Zulu. " + 
-					"Also, you may say Shuttle for S train."
-			);
+					"Also, you may say Shuttle for S train. " + 
+					"Do you want to hear that again?"
+			, false);
 		}
 
 		String train = (String)session.getAttribute("train");
