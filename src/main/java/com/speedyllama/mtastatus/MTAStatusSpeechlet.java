@@ -70,6 +70,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			if (title != null) {
 				responseText += title;
 			}
+			title += ". . .";
 			
 			String detail = statusObj.getDetail();
 			if (detail != null && !detail.isEmpty()) {
