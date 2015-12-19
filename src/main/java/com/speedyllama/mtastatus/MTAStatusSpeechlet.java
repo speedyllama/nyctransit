@@ -27,7 +27,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		if (Constants.INTENT_QUERY_TRAIN_STATUS.equals(intent.getName())) {
 			return responseShortStatus(intent, session);
 		} else if (Constants.INTENT_QUERY_STATUS_DETAIL.equals(intent.getName())) {
-			return responseDetailStatus(intent, session);
+			return responseYesOrNo(intent, session);
 		} else {
 			return responseText("Sorry, I didn't get it. Let's try again.");
 		}
@@ -76,6 +76,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			String detail = statusObj.getDetail();
 			if (detail != null && !detail.isEmpty()) {
 				responseText += "Do you want to hear details?";
+				session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "TRAIN_QUERY");
 				session.setAttribute("train", train);
 				return responseText(responseText, false);
 			} else {
@@ -84,8 +85,11 @@ public class MTAStatusSpeechlet implements Speechlet {
 		}
 	}
 	
-	protected SpeechletResponse responseDetailStatus(Intent intent, Session session) {
-		if (true == (boolean)session.getAttribute("nato")) {
+	protected SpeechletResponse responseYesOrNo(Intent intent, Session session) {
+		// Clear session state
+		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
+
+		if ("NATO".equals((String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE))) {
 			if (isPositive(intent.getSlot("Answer").getValue())) {
 				return responseText(
 						"Here are NATO phonetic alphabets. " + 
@@ -108,19 +112,20 @@ public class MTAStatusSpeechlet implements Speechlet {
 						"Do you want to hear that again?"
 				, false);
 			} else {
-				session.setAttribute("nato", false);
+				session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 				return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
 			}
+		} else if ("TRAIN_QUERY".equals((String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE))) {
+			String train = (String)session.getAttribute("train");
+	
+			String answer = intent.getSlot("Answer").getValue().toLowerCase();
+			if (isPositive(answer)) {
+				return responseText(currentStatus.getStatus(train).getDetail());
+			} else {
+				return responseText("See you!");
+			}
 		}
-
-		String train = (String)session.getAttribute("train");
-
-		String answer = intent.getSlot("Answer").getValue().toLowerCase();
-		if (isPositive(answer)) {
-			return responseText(currentStatus.getStatus(train).getDetail());
-		} else {
-			return responseText("See you!");
-		}
+		return responseText("");
 	}
 	
 	private boolean isPositive(String answer) {
@@ -134,7 +139,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		session.setAttribute("nato", true);
+		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
 		return responseText("Hi! You can ask me N.Y.C subway status. " + 
 				"Like: What is the status of seven train? " +
 				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
