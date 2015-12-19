@@ -86,10 +86,11 @@ public class MTAStatusSpeechlet implements Speechlet {
 	}
 	
 	protected SpeechletResponse responseYesOrNo(Intent intent, Session session) {
+		String previousState = (String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE);
 		// Clear session state
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 
-		if ("NATO".equals((String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE))) {
+		if ("NATO".equals(previousState)) {
 			if (isPositive(intent.getSlot("Answer").getValue())) {
 				return responseText(
 						"Here are NATO phonetic alphabets. " + 
@@ -115,7 +116,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 				session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 				return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
 			}
-		} else if ("TRAIN_QUERY".equals((String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE))) {
+		} else if ("TRAIN_QUERY".equals(previousState)) {
 			String train = (String)session.getAttribute("train");
 	
 			String answer = intent.getSlot("Answer").getValue().toLowerCase();
