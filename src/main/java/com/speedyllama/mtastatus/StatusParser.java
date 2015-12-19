@@ -111,13 +111,16 @@ public class StatusParser {
     }
 
     private Alert buildTempAlert(String status, String title, String detail, boolean hasDetail, StringBuilder builder) {
+    	// Replace <br> to period to add pause.
+    	String rawString = builder.toString().replaceAll("<br>", " . ");
+    	
         if (hasDetail) {
-            Element detailElem = Jsoup.parse(builder.toString());
+            Element detailElem = Jsoup.parse(rawString);
             // Remove tables
             detailElem.select("table").remove();
             detail = detailElem.text();
         } else {
-            title = Jsoup.parse(builder.toString()).text();
+            title = Jsoup.parse(rawString).text();
         }
         Alert alert = new Alert(null, null, status, title, detail);
         return alert;
