@@ -59,8 +59,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = train.substring(0, 1).toUpperCase();
 		} else {
 			return responseText("Sorry, there is a problem understanding which train you want to ask about." +
-					"If you are asking about an alphabetical train, try use another word that begins with that alphabet. " + 
-					"Like: What is the status of Echo train?");
+					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
+			);
 		}
 
 		Status statusObj = currentStatus.getStatus(train);
@@ -109,7 +109,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 				, false);
 			} else {
 				session.setAttribute("nato", false);
-				return responseText("Please ask me subway status now. Like: What is the status of seven train?", false);
+				return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
 			}
 		}
 
@@ -138,7 +138,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		return responseText("Hi! You can ask me N.Y.C subway status. " + 
 				"Like: What is the status of seven train? " +
 				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
-				"Like: What is the status of Echo train? NATO phonetic alphabets are recommended. " +
+				"For example, for A train, say: What is the status of Alpha? NATO phonetic alphabets are recommended. " +
 				"Do you want to hear a list of NATO phonetic alphabets?"
 		, false);
 	}
