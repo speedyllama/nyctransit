@@ -156,7 +156,7 @@ public class StatusParser {
                 // Other spans will be disregarded, like "DateStyle" spans
             } else if ("br".equals(nodeName)) {
                 // <br> tags are replaced with periods to add pause.
-            	builder.append(".");
+            	builder.append(" . ");
             } else if ("a".equals(nodeName) && ((Element)node).hasAttr("onclick")) {
                 // Title found! Has detail
                 hasDetail = true;
