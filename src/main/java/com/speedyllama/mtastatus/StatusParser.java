@@ -112,15 +112,17 @@ public class StatusParser {
 
     private Alert buildTempAlert(String status, String title, String detail, boolean hasDetail, StringBuilder builder) {
     	// Replace <br> to period to add pause.
-    	String rawString = builder.toString().replaceAll("<br>", " . ");
+    	// Add a dot to any line that does not end with a punctuation.
+    	String rawString = builder.toString().replaceAll("[a-zA-Z0-9]\\s*\\n", ".\n");
     	
         if (hasDetail) {
             Element detailElem = Jsoup.parse(rawString);
             // Remove tables
             detailElem.select("table").remove();
-            detail = detailElem.text();
+            // \\p{C} is for removing non-displayable characters.
+            detail = detailElem.text().replaceAll("\\p{C}", "").replaceAll("\\s+", " ");
         } else {
-            title = Jsoup.parse(rawString).text();
+            title = Jsoup.parse(rawString).text().replaceAll("\\p{C}", "").replaceAll("\\s+", " ");
         }
         Alert alert = new Alert(null, null, status, title, detail);
         return alert;
@@ -158,8 +160,7 @@ public class StatusParser {
                 }
                 // Other spans will be disregarded, like "DateStyle" spans
             } else if ("br".equals(nodeName)) {
-                // <br> tags are replaced with periods to add pause.
-            	builder.append(" . ");
+                // <br> tags are omitted.
             } else if ("a".equals(nodeName) && ((Element)node).hasAttr("onclick")) {
                 // Title found! Has detail
                 hasDetail = true;
