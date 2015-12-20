@@ -54,6 +54,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "6";
 		} else if ("seven".equalsIgnoreCase(train)) {
 			train = "7";
+		} else if ("tardy".equalsIgnoreCase(train)) { // Alexa misunderstand Charlie as tardy
+			train = "C";
 		} else if (train != null && !train.isEmpty()) {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
