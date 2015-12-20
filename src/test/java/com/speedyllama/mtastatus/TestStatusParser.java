@@ -29,13 +29,13 @@ public class TestStatusParser {
 		assertGoodService("1|2|3|4|5|6|7|A|C|B|J|Z|L|N|Q|R|S|SIR", statusMap);
 		assertSame(statusMap.get("E").getStatus(), TrainStatus.PLANNED_WORK);
 		// Two alerts combined
-		assertEquals(statusMap.get("E").getTitle(), "[E] Jamaica Center-bound trains run local from Queens Plaza to 71 Av. [E] World Trade Center-bound trains run local from 71 Av to Queens Plaza. ");
-		assertSame(statusMap.get("D").getStatus(), TrainStatus.DELAYS);
-		assertEquals(statusMap.get("D").getTitle(), "Due to ongoing signal problems at Bay 50 St, southbound [D] trains are running with delays. Allow additional travel time.. ");
-		assertSame(statusMap.get("F").getStatus(), TrainStatus.PLANNED_WORK);
-		assertEquals(statusMap.get("F").getTitle(), "[F] Trains run local in both directions between 21 St-Queensbridge and 71 Av. ");
-		assertSame(statusMap.get("M").getStatus(), TrainStatus.PLANNED_WORK);
-		assertSame(statusMap.get("G").getStatus(), TrainStatus.PLANNED_WORK);
-		assertEquals(statusMap.get("G").getTitle(), "[G] No trains between Bedford-Nostrand Avs and Court Sq. ");
+		assertEquals("[E] Jamaica Center-bound trains run local from Queens Plaza to 71 Av. [E] World Trade Center-bound trains run local from 71 Av to Queens Plaza. ", statusMap.get("E").getTitle());
+		assertSame(TrainStatus.DELAYS, statusMap.get("D").getStatus());
+		assertEquals("Due to ongoing signal problems at Bay 50 St, southbound [D] trains are running with delays. Allow additional travel time.. ", statusMap.get("D").getTitle());
+		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("F").getStatus());
+		assertEquals("[F] Trains run local in both directions between 21 St-Queensbridge and 71 Av. ", statusMap.get("F").getTitle());
+		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("M").getStatus());
+		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("G").getStatus());
+		assertEquals("[G] No trains between Bedford-Nostrand Avs and Court Sq. ", statusMap.get("G").getTitle());
 	}
 }
