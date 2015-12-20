@@ -28,6 +28,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 			return responseShortStatus(intent, session);
 		} else if (Constants.INTENT_QUERY_STATUS_DETAIL.equals(intent.getName())) {
 			return responseYesOrNo(intent, session);
+		} else if ("AMAZON.HelpIntent".equals(intent.getName())){
+			return help(intent, session);
 		} else {
 			return responseText("Sorry, I didn't get it. Let's try again.");
 		}
@@ -130,6 +132,10 @@ public class MTAStatusSpeechlet implements Speechlet {
 			}
 		}
 		return responseText("");
+	}
+	
+	private SpeechletResponse help(Intent intent, Session session) {
+		return responseText("Hi! You can ask me N.Y.C subway status. Or, say \"help\" for help.", false);
 	}
 	
 	private boolean isPositive(String answer) {
