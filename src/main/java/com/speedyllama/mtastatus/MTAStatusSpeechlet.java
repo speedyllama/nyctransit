@@ -26,8 +26,10 @@ public class MTAStatusSpeechlet implements Speechlet {
 		
 		if (Constants.INTENT_QUERY_TRAIN_STATUS.equals(intent.getName())) {
 			return responseShortStatus(intent, session);
-		} else if (Constants.INTENT_QUERY_STATUS_DETAIL.equals(intent.getName())) {
-			return responseYesOrNo(intent, session);
+		} else if ("AMAZON.YesIntent".equals(intent.getName())) {
+			return responseYes(intent, session);
+		} else if ("AMAZON.NoIntent".equals(intent.getName())) {
+			return responseNo(intent, session);
 		} else if ("AMAZON.HelpIntent".equals(intent.getName())){
 			return help(intent, session);
 		} else {
@@ -90,46 +92,48 @@ public class MTAStatusSpeechlet implements Speechlet {
 		}
 	}
 	
-	protected SpeechletResponse responseYesOrNo(Intent intent, Session session) {
+	protected SpeechletResponse responseYes(Intent intent, Session session) {
 		String previousState = (String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE);
 		// Clear session state
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 
 		if ("NATO".equals(previousState)) {
-			if (isPositive(intent.getSlot("Answer").getValue())) {
-				return responseText(
-						"Here are NATO phonetic alphabets. " + 
-						"A for Alpha. " + 
-						"B for Bravo. " + 
-						"C for Charlie. " + 
-						"D for Delta. " + 
-						"E for Echo. " + 
-						"F for Foxtrot. " + 
-						"G for Golf. " + 
-						"J for Juliette. " + 
-						"L for Lima. " + 
-						"M for Mike. " + 
-						"N for November. " + 
-						"Q for Quebec. " + 
-						"R for Romeo. " + 
-						"S for Sierra. " + 
-						"Z for Zulu. " + 
-						"Also, you may say Shuttle for S train. " + 
-						"Do you want to hear that again?"
-				, false);
-			} else {
-				session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
-				return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
-			}
+			return responseText(
+					"Here are NATO phonetic alphabets. " + 
+					"A for Alpha. " + 
+					"B for Bravo. " + 
+					"C for Charlie. " + 
+					"D for Delta. " + 
+					"E for Echo. " + 
+					"F for Foxtrot. " + 
+					"G for Golf. " + 
+					"J for Juliette. " + 
+					"L for Lima. " + 
+					"M for Mike. " + 
+					"N for November. " + 
+					"Q for Quebec. " + 
+					"R for Romeo. " + 
+					"S for Sierra. " + 
+					"Z for Zulu. " + 
+					"Also, you may say Shuttle for S train. " + 
+					"Do you want to hear that again?"
+			, false);
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			String train = (String)session.getAttribute("train");
 	
-			String answer = intent.getSlot("Answer").getValue().toLowerCase();
-			if (isPositive(answer)) {
-				return responseText(currentStatus.getStatus(train).getDetail());
-			} else {
-				return responseText("See you!");
-			}
+			return responseText(currentStatus.getStatus(train).getDetail());
+		}
+		return responseText("");
+	}
+	
+	protected SpeechletResponse responseNo(Intent intent, Session session) {
+		String previousState = (String)session.getAttribute(Constants.ATTR_PREVIOUS_STATE);
+		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
+
+		if ("NATO".equals(previousState)) {
+			return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
+		} else if ("TRAIN_QUERY".equals(previousState)) {
+			return responseText("See you!");
 		}
 		return responseText("");
 	}
