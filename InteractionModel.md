@@ -14,15 +14,6 @@ Intent Schema
           "type": "TRAIN"
         }
       ]
-    },
-    {
-      "intent": "QueryStatusDetail",
-      "slots": [
-        {
-          "name": "Answer",
-          "type": "LITERAL"
-        }
-      ]
     }
   ]
 }
@@ -66,8 +57,3 @@ QueryTrainStatus What is the status of {Train} train
 QueryTrainStatus What is the status of {Train}
 QueryTrainStatus What's the status of {Train} train
 QueryTrainStatus What's the status of {Train}
-QueryTrainStatus {Train} train status
-QueryStatusDetail {yes|Answer}
-QueryStatusDetail {yeah|Answer}
-QueryStatusDetail {ok|Answer}
-QueryStatusDetail {go ahead|Answer}
