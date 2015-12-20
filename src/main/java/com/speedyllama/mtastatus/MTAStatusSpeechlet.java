@@ -135,7 +135,13 @@ public class MTAStatusSpeechlet implements Speechlet {
 	}
 	
 	private SpeechletResponse help(Intent intent, Session session) {
-		return responseText("Hi! You can ask me N.Y.C subway status. Or, say \"help\" for help.", false);
+		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
+		return responseText("Hi! You can ask me N.Y.C subway status. " + 
+				"Like: What is the status of seven? " +
+				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
+				"For example, for A train, say: What is the status of Alpha? NATO phonetic alphabets are recommended. " +
+				"Do you want to hear a list of NATO phonetic alphabets?"
+		, false);
 	}
 	
 	private boolean isPositive(String answer) {
@@ -149,13 +155,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
-		return responseText("Hi! You can ask me N.Y.C subway status. " + 
-				"Like: What is the status of seven train? " +
-				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
-				"For example, for A train, say: What is the status of Alpha? NATO phonetic alphabets are recommended. " +
-				"Do you want to hear a list of NATO phonetic alphabets?"
-		, false);
+		return responseText("Hi! You can ask me N.Y.C subway status. Or, say \"help\" for help.", false);
 	}
 
 	@Override
