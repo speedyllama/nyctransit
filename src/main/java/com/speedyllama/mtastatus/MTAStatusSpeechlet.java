@@ -98,6 +98,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 
 		if ("NATO".equals(previousState)) {
+			session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
 			return responseText(
 					"Here are NATO phonetic alphabets. " + 
 					"A for Alpha. " + 
@@ -148,15 +149,6 @@ public class MTAStatusSpeechlet implements Speechlet {
 		, false);
 	}
 	
-	private boolean isPositive(String answer) {
-		if (answer.startsWith("y") || 
-				answer.equals("ok") ||
-				answer.equals("go ahead")) {
-			return true;
-		}
-		return false;
-	}
-
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
 		return responseText("Hi! You can ask me N.Y.C subway status. Or, say \"help\" for help.", false);
