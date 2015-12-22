@@ -141,7 +141,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	private SpeechletResponse help(Intent intent, Session session) {
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
-		return responseText("Hi! You can ask me N.Y.C subway status. " + 
+		return responseText("Hi! You can ask me New York City subway status. " + 
 				"Like: What is the status of seven? " +
 				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
 				"For example, for A train, say: What is the status of Alpha? NATO phonetic alphabets are recommended. " +
@@ -151,7 +151,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		return responseText("Hi! You can ask me N.Y.C subway status. Or, say \"help\" for help.", false);
+		return responseText("Hi! You can ask me New York City subway status. Or, say \"help\" for help.", false);
 	}
 
 	@Override
