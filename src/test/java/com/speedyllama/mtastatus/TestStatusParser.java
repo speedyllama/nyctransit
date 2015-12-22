@@ -1,10 +1,12 @@
 package com.speedyllama.mtastatus;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 import java.util.Map;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestStatusParser {
@@ -24,7 +26,8 @@ public class TestStatusParser {
 	}
 	
 	@Test
-	public void test() throws MTAStatusException {
+	@Ignore
+	public void test1() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151217T2257.xml").toString()));
 		assertGoodService("1|2|3|4|5|6|7|A|C|B|J|Z|L|N|Q|R|S|SIR", statusMap);
 		assertSame(statusMap.get("E").getStatus(), TrainStatus.PLANNED_WORK);
@@ -37,5 +40,12 @@ public class TestStatusParser {
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("M").getStatus());
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("G").getStatus());
 		assertEquals("[G] No trains between Bedford-Nostrand Avs and Court Sq. ", statusMap.get("G").getTitle());
+	}
+	
+	@Test
+	public void test2() throws MTAStatusException {
+		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151221T2135.xml").toString()));
+		assertEquals("Due to a rail condition at 45 St, southbound [R] trains are running express from Atlantic Av-Barclays Center to 59 St. As an alternative use B63 bus on Atlantic Av. Corresponding stops will be made along 5 Av. Allow additional travel time.. ", statusMap.get("R").getTitle());
+		assertEquals(null, statusMap.get("R").getDetail());
 	}
 }
