@@ -84,6 +84,7 @@ public class StatusParser {
 
             		builder = new StringBuilder();
             		for (Alert alert : alerts) {
+            			builder.append(alert.title).append(" ");
             			if (alert.detail != null && !alert.detail.isEmpty()) {
             				hasDetail = true;
             				builder.append(alert.detail).append(" ");
