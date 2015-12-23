@@ -124,7 +124,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			String train = (String)session.getAttribute("train");
 	
-			return responseText(currentStatus.getStatus(train).getDetail());
+			return responseTextWithCard(currentStatus.getStatus(train).getDetail());
 		}
 		return responseText("");
 	}
@@ -166,7 +166,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		// TODO Auto-generated method stub
 	}
 	
-	protected SpeechletResponse responseTextWithCard(String type, String text, boolean shouldEndSession) {
+	protected SpeechletResponse responseTextWithCard(String text, boolean shouldEndSession) {
 		SpeechletResponse response = responseText(text, shouldEndSession);
 		Card card = new SimpleCard();
 		card.setTitle(text);
@@ -174,8 +174,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 		return response;
 	}
 
-	protected SpeechletResponse responseTextWithCard(String type, String text) {
-		return responseTextWithCard(type, text, true);
+	protected SpeechletResponse responseTextWithCard(String text) {
+		return responseTextWithCard(text, true);
 	}
 
 	protected SpeechletResponse responseText(String text, boolean shouldEndSession) {
