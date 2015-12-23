@@ -38,7 +38,7 @@ public class TestStatusParser {
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("M").getStatus());
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("G").getStatus());
 		assertEquals("[G] No trains between Bedford-Nostrand Avenues and Court Square.", statusMap.get("G").getTitle());
-		assertEquals("", statusMap.get("G").getDetail());
+		assertEquals("[G] No trains between Bedford-Nostrand Avenues and Court Square. Free Shuttle Buses provide alternate service. Late Nights, 10:45 PM to 5 AM, Monday to Friday, December 14 - 18 Monday to Thursday, December 21 - 24. [G] service operates between Church Avenue and Bedford-Nostrand Avenues. Shuttle Buses make all [G] station stops between Bedford-Nostrand Avenues and Court Square. Transfer between [G] trains and Shuttle Buses at Bedford-Nostrand Avenues. Show Shuttle Bus Stops.", statusMap.get("G").getDetail());
 	}
 	
 	@Test
@@ -46,5 +46,11 @@ public class TestStatusParser {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151221T2135.xml").toString()));
 		assertEquals("Due to a rail condition at 45 Street, southbound [R] trains are running express from Atlantic Avenue-Barclays Center to 59 Street. As an alternative use B63 bus on Atlantic Avenue. Corresponding stops will be made along 5 Avenue. Allow additional travel time.", statusMap.get("R").getTitle());
 		assertEquals(null, statusMap.get("R").getDetail());
+	}
+
+	@Test
+	public void test3() throws MTAStatusException {
+		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151223T1146.xml").toString()));
+		assertEquals("", statusMap.get("6").getDetail());
 	}
 }

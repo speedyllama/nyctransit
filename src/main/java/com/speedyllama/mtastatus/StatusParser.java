@@ -124,6 +124,25 @@ public class StatusParser {
     			.replaceAll("(?i)\\baves\\b", "Avenues")
     			.replaceAll("(?i)\\bavs\\b", "Avenues")
     			.replaceAll("(?i)\\bbklyn\\b", "Brooklyn")
+    			.replaceAll("(?i)\\bmon\\b", "Monday")
+    			.replaceAll("(?i)\\btue\\b", "Tuesday")
+    			.replaceAll("(?i)\\bwed\\b", "Wednesday")
+    			.replaceAll("(?i)\\bthu(r)*\\b", "Thursday")
+    			.replaceAll("(?i)\\bfri\\b", "Friday")
+    			.replaceAll("(?i)\\bsat\\b", "Saturday")
+    			.replaceAll("(?i)\\bsun\\b", "Sunday")
+    			.replaceAll("(?i)\\bjan\\b", "January")
+    			.replaceAll("(?i)\\bfeb\\b", "Feburary")
+    			.replaceAll("(?i)\\bmar\\b", "March")
+    			.replaceAll("(?i)\\bapr\\b", "April")
+    			.replaceAll("(?i)\\bjun\\b", "June")
+    			.replaceAll("(?i)\\bjul\\b", "July")
+    			.replaceAll("(?i)\\baug\\b", "August")
+    			.replaceAll("(?i)\\bsep\\b", "September")
+    			.replaceAll("(?i)\\boct\\b", "October")
+    			.replaceAll("(?i)\\bnov\\b", "November")
+    			.replaceAll("(?i)\\bdec\\b", "December")
+    			.replaceAll("(?i)\\[SB\\]\\s*(free )*(shuttle )*(bus)*(es)*", "$1Shuttle Bus$4")
     			.replaceAll("(?i)\\bsq\\b", "Square");
     	if (!output.endsWith(".")) {
     		output += ".";
@@ -206,7 +225,7 @@ public class StatusParser {
         return alerts;
     }
     
-    private static Pattern LINES_PATTERN = Pattern.compile("\\[(" + Constants.LINES + ")\\]");
+    private static Pattern LINES_PATTERN = Pattern.compile("\\[(" + Constants.LINES + ")D*\\]"); // D for diamond
     private static String[] NOT_MULTIPLE_LINES_PATTERN = {
         "provide alternate service",
         "via",
@@ -229,7 +248,11 @@ public class StatusParser {
         List<String> lines = new ArrayList<String>();
         Set<String> linesSet = new HashSet<String>();
         while (matcher.find()) {
-            String tmpLine = matcher.group().replaceAll("\\[", "").replaceAll("\\]", "");
+            String tmpLine = matcher.group().replaceAll("\\[", "").replaceAll("\\]", ""); 
+            if (!tmpLine.equals("SIR") && tmpLine.length() > 1) {
+            	tmpLine = tmpLine.substring(0, 1); // [6D] => [6]
+            	title = title.replaceAll("\\[([67])D\\]", "[$1 Express]"); // [6D] => [6 Express]. Only 6 and 7 have diamonds.
+            }
             lines.add(tmpLine);
             linesSet.add(tmpLine);
         } 
