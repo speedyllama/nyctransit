@@ -68,21 +68,31 @@ public class StatusParser {
             Map<String, Status> statusMap = new HashMap<String, Status>();
             for (String trainKey : Constants.LINES.split("\\|")) {
             	List<Alert> alerts = alertsOfTimestamp.get(trainKey);
+            	boolean hasDetail = false;
             	if (alerts != null && !alerts.isEmpty()) {
+            		for (Alert alert : alerts) {
+            			alert.title = AdjustAbbreviationAndAddPeriod(alert.title);
+            			alert.detail = AdjustAbbreviationAndAddPeriod(alert.detail);
+            		}
+
             		TrainStatus status = TrainStatus.parse(alerts.get(0).status);
             		StringBuilder builder = new StringBuilder();
             		for (Alert alert : alerts) {
-            			builder.append(alert.title).append(". ");
+            			builder.append(alert.title).append(" ");
             		}
-            		String title = builder.toString();
+            		String title = builder.toString().trim();
 
             		builder = new StringBuilder();
             		for (Alert alert : alerts) {
-            			builder.append(alert.title).append(". ").append(alert.detail).append(".");
+            			if (alert.detail != null && !alert.detail.isEmpty()) {
+            				hasDetail = true;
+            				builder.append(alert.detail).append(" ");
+            			}
             		}
-            		String detail = builder.toString();
-            		if (detail.trim().isEmpty()) {
-            			detail = null;
+            		
+            		String detail = null;
+            		if (hasDetail) {
+            			detail = builder.toString().trim();
             		}
             		statusMap.put(trainKey, new Status(trainKey, status, title, detail));
             	} else {
@@ -101,6 +111,20 @@ public class StatusParser {
         }
     }
     
+    private String AdjustAbbreviationAndAddPeriod(String input) {
+    	String output = input.trim();
+    	if (output.isEmpty()) {
+    		return "";
+    	}
+    	output = output.replaceAll("(?i)\\bst\\b", "Street")
+    			.replaceAll("(?i)\\b(av)\\b", "Avenue")
+    			.replaceAll("(?i)\\b(ave)\\b", "Avenue");
+    	if (!output.endsWith(".")) {
+    		output += ".";
+    	}
+    	return output;
+    }
+
     private void addAlert(Alert alert, Map<String, List<Alert>> alertsOfTimestamp) {
         List<Alert> alerts = alertsOfTimestamp.get(alert.line);
         if (alerts == null) {
