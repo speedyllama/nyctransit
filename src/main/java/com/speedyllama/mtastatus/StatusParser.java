@@ -143,7 +143,7 @@ public class StatusParser {
     private Alert buildTempAlert(String status, String title, String detail, boolean hasDetail, StringBuilder builder) {
     	// Replace <br> to period to add pause.
     	// Add a dot to any line that does not end with a punctuation.
-    	String rawString = builder.toString().replaceAll("[a-zA-Z0-9]\\s*\\n", ".\n");
+    	String rawString = builder.toString().replaceAll("([a-zA-Z0-9])\\s*(<br>)+", "$1. ");
     	
         if (hasDetail) {
             Element detailElem = Jsoup.parse(rawString);
@@ -190,7 +190,8 @@ public class StatusParser {
                 }
                 // Other spans will be disregarded, like "DateStyle" spans
             } else if ("br".equals(nodeName)) {
-                // <br> tags are omitted.
+            	// Append <br> and they will be treated later.
+            	builder.append("<br>");
             } else if ("a".equals(nodeName) && ((Element)node).hasAttr("onclick")) {
                 // Title found! Has detail
                 hasDetail = true;
