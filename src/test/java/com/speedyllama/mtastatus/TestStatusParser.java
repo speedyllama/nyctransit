@@ -25,7 +25,7 @@ public class TestStatusParser {
 	}
 	
 	@Test
-	public void test1() throws MTAStatusException {
+	public void testParserOveral() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151217T2257.xml").toString()));
 		assertGoodService("1|2|3|4|5|6|7|A|C|B|J|Z|L|N|Q|R|S|SIR", statusMap);
 		assertSame(statusMap.get("E").getStatus(), TrainStatus.PLANNED_WORK);
@@ -42,15 +42,16 @@ public class TestStatusParser {
 	}
 	
 	@Test
-	public void test2() throws MTAStatusException {
+	public void testNullDetail() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151221T2135.xml").toString()));
 		assertEquals("Due to a rail condition at 45 Street, southbound [R] trains are running express from Atlantic Avenue-Barclays Center to 59 Street. As an alternative use B63 bus on Atlantic Avenue. Corresponding stops will be made along 5 Avenue. Allow additional travel time.", statusMap.get("R").getTitle());
 		assertEquals(null, statusMap.get("R").getDetail());
 	}
 
 	@Test
-	public void test3() throws MTAStatusException {
+	public void testDiamondTrain() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151223T1146.xml").toString()));
-		assertEquals("", statusMap.get("6").getDetail());
+		assertEquals("Due to signal problems at 125 Street, the following service changes are in effect: Some northbound [4] and [5] trains are running local from 42 Street- Grand Central to 125 Street. Northbound [4], [5] and [6] trains are running with delays. Allow additional travel time. [6 Express] Brooklyn Bridge-bound trains run local from Parkchester to 3 Avenue-138 Street. [6] The last stop for alternate trains headed toward Pelham Bay Park is 3 Avenue-138 Street.", statusMap.get("6").getTitle());
+		assertEquals("Due to signal problems at 125 Street, the following service changes are in effect: Some northbound [4] and [5] trains are running local from 42 Street- Grand Central to 125 Street. Northbound [4], [5] and [6] trains are running with delays. Allow additional travel time. [6 Express] Brooklyn Bridge-bound trains run local from Parkchester to 3 Avenue-138 Street. Days, 10:30 AM to 1 PM, Monday to Thursday, December 21 - 24. Please allow additional travel time. [6] The last stop for alternate trains headed toward Pelham Bay Park is 3 Avenue-138 Street. Days, 10:30 AM to 3 PM, Monday to Thursday, December 21 - 24. Please allow additional travel time in the Bronx.", statusMap.get("6").getDetail());
 	}
 }
