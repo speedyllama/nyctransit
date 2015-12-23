@@ -118,7 +118,8 @@ public class StatusParser {
     	}
     	output = output.replaceAll("(?i)\\bst\\b", "Street")
     			.replaceAll("(?i)\\b(av)\\b", "Avenue")
-    			.replaceAll("(?i)\\b(ave)\\b", "Avenue");
+    			.replaceAll("(?i)\\b(ave)\\b", "Avenue")
+    			.replaceAll("(?i)\\b(sq)\\b", "Square");
     	if (!output.endsWith(".")) {
     		output += ".";
     	}
