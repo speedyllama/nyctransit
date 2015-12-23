@@ -9,7 +9,9 @@ import com.amazon.speech.speechlet.SessionStartedRequest;
 import com.amazon.speech.speechlet.Speechlet;
 import com.amazon.speech.speechlet.SpeechletException;
 import com.amazon.speech.speechlet.SpeechletResponse;
+import com.amazon.speech.ui.Card;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
+import com.amazon.speech.ui.SimpleCard;
 
 public class MTAStatusSpeechlet implements Speechlet {
 	
@@ -162,6 +164,18 @@ public class MTAStatusSpeechlet implements Speechlet {
 	@Override
 	public void onSessionStarted(SessionStartedRequest request, Session session) throws SpeechletException {
 		// TODO Auto-generated method stub
+	}
+	
+	protected SpeechletResponse responseTextWithCard(String type, String text, boolean shouldEndSession) {
+		SpeechletResponse response = responseText(text, shouldEndSession);
+		Card card = new SimpleCard();
+		card.setTitle(text);
+		response.setCard(card);
+		return response;
+	}
+
+	protected SpeechletResponse responseTextWithCard(String type, String text) {
+		return responseTextWithCard(type, text, true);
 	}
 
 	protected SpeechletResponse responseText(String text, boolean shouldEndSession) {
