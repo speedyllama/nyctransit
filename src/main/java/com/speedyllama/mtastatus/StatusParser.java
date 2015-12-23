@@ -119,12 +119,12 @@ public class StatusParser {
     	}
     	output = output.replaceAll("(?i)\\bst\\b", "Street")
     			.replaceAll("(?i)\\bsts\\b", "Streets")
-    			.replaceAll("(?i)\\b(av)\\b", "Avenue")
-    			.replaceAll("(?i)\\b(ave)\\b", "Avenue")
-    			.replaceAll("(?i)\\b(aves)\\b", "Avenues")
-    			.replaceAll("(?i)\\b(avs)\\b", "Avenues")
-    			.replaceAll("(?i)\\b(bklyn)\\b", "Brooklyn")
-    			.replaceAll("(?i)\\b(sq)\\b", "Square");
+    			.replaceAll("(?i)\\bav\\b", "Avenue")
+    			.replaceAll("(?i)\\bave\\b", "Avenue")
+    			.replaceAll("(?i)\\baves\\b", "Avenues")
+    			.replaceAll("(?i)\\bavs\\b", "Avenues")
+    			.replaceAll("(?i)\\bbklyn\\b", "Brooklyn")
+    			.replaceAll("(?i)\\bsq\\b", "Square");
     	if (!output.endsWith(".")) {
     		output += ".";
     	}
