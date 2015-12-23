@@ -118,8 +118,12 @@ public class StatusParser {
     		return "";
     	}
     	output = output.replaceAll("(?i)\\bst\\b", "Street")
+    			.replaceAll("(?i)\\bsts\\b", "Streets")
     			.replaceAll("(?i)\\b(av)\\b", "Avenue")
     			.replaceAll("(?i)\\b(ave)\\b", "Avenue")
+    			.replaceAll("(?i)\\b(aves)\\b", "Avenues")
+    			.replaceAll("(?i)\\b(avs)\\b", "Avenues")
+    			.replaceAll("(?i)\\b(bklyn)\\b", "Brooklyn")
     			.replaceAll("(?i)\\b(sq)\\b", "Square");
     	if (!output.endsWith(".")) {
     		output += ".";
