@@ -83,7 +83,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			
 			String detail = statusObj.getDetail();
 			if (detail != null && !detail.isEmpty()) {
-				responseText += " Do you want to hear details?";
+				responseText += " <break time=\"1s\"/> Do you want to hear details?";
 				session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "TRAIN_QUERY");
 				session.setAttribute("train", train);
 				return responseText(responseText, false);
