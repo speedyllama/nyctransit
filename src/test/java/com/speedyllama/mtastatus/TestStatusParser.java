@@ -37,7 +37,7 @@ public class TestStatusParser {
 		assertEquals("[F] Trains run local in both directions between 21 Street-Queensbridge and 71 Avenue.", statusMap.get("F").getTitle());
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("M").getStatus());
 		assertSame(TrainStatus.PLANNED_WORK, statusMap.get("G").getStatus());
-		assertEquals("[G] No trains between Bedford-Nostrand Avs and Court Sq.", statusMap.get("G").getTitle());
+		assertEquals("[G] No trains between Bedford-Nostrand Avs and Court Square.", statusMap.get("G").getTitle());
 	}
 	
 	@Test
