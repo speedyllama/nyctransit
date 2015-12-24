@@ -9,7 +9,6 @@ import com.amazon.speech.speechlet.SessionStartedRequest;
 import com.amazon.speech.speechlet.Speechlet;
 import com.amazon.speech.speechlet.SpeechletException;
 import com.amazon.speech.speechlet.SpeechletResponse;
-import com.amazon.speech.ui.Card;
 import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.SimpleCard;
 
@@ -124,7 +123,13 @@ public class MTAStatusSpeechlet implements Speechlet {
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			String train = (String)session.getAttribute("train");
 	
-			return responseTextWithCard(currentStatus.getStatus(train).getDetail());
+			Status trainStatus = currentStatus.getStatus(train);
+			SpeechletResponse response = responseText(trainStatus.getDetail());
+			SimpleCard card = new SimpleCard();
+			card.setContent(trainStatus.getDetail());
+			card.setTitle(train + " Train Status: " + trainStatus.getStatus().toString());
+			response.setCard(card);
+			return response;
 		}
 		return responseText("");
 	}
@@ -166,18 +171,6 @@ public class MTAStatusSpeechlet implements Speechlet {
 		// TODO Auto-generated method stub
 	}
 	
-	protected SpeechletResponse responseTextWithCard(String text, boolean shouldEndSession) {
-		SpeechletResponse response = responseText(text, shouldEndSession);
-		Card card = new SimpleCard();
-		card.setTitle(text);
-		response.setCard(card);
-		return response;
-	}
-
-	protected SpeechletResponse responseTextWithCard(String text) {
-		return responseTextWithCard(text, true);
-	}
-
 	protected SpeechletResponse responseText(String text, boolean shouldEndSession) {
 		PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
 		speech.setText(text);
