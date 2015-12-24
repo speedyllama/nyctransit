@@ -63,7 +63,32 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "6";
 		} else if ("seven".equalsIgnoreCase(train)) {
 			train = "7";
+		} else if ("8".equalsIgnoreCase(train) || "eight".equalsIgnoreCase(train)) { 
+			train = "A";
+		} else if ("see".equalsIgnoreCase(train)) { 
+			train = "C";
+		} else if ("i".equalsIgnoreCase(train)) { 
+			train = "E";
+		} else if ("ev".equalsIgnoreCase(train)) { 
+			train = "F";
+		} else if ("out".equalsIgnoreCase(train)) { 
+			train = "L";
+		} else if ("al".equalsIgnoreCase(train)) { 
+			train = "L";
+		} else if ("them".equalsIgnoreCase(train)) { 
+			train = "M";
+		} else if ("and".equalsIgnoreCase(train)) { 
+			train = "N";
+		} else if ("in".equalsIgnoreCase(train)) { 
+			train = "N";
+		} else if ("out".equalsIgnoreCase(train)) { 
+			train = "R";
+		} else if ("ass".equalsIgnoreCase(train)) { 
+			train = "S";
+		} else if ("the".equalsIgnoreCase(train)) { 
+			train = "Z";
 		} else if (train.startsWith("t")) { // Alexa misunderstand Charlie as a "t"-begin word.
+			// WARNING: do not shortcut other options.
 			train = "C";
 		} else if (!train.isEmpty()) {
 			// Take the first character from the word.
