@@ -34,7 +34,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		} else if ("AMAZON.HelpIntent".equals(intent.getName())){
 			return help(intent, session);
 		} else {
-			return responseText("Sorry, I didn't get it. Let's try again.");
+			return responseText("Sorry, I didn't get that. Please try again.");
 		}
 	}
 	
@@ -65,7 +65,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
 		} else {
-			return responseText("Sorry, I didn't get it. " +
+			return responseText("Sorry, I didn't get that. " +
 					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
 			);
 		}
