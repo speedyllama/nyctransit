@@ -40,7 +40,11 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
 		String train = intent.getSlot("Train").getValue();
-		if ("one".equalsIgnoreCase(train)) {
+		
+		boolean understood = true;
+		if (train == null) {
+			understood = false;
+		} else if ("one".equalsIgnoreCase(train)) {
 			train = "1";
 		// Alexa is not smart one number "two".
 		} else if ("two".equalsIgnoreCase(train) ||
@@ -59,17 +63,21 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "6";
 		} else if ("seven".equalsIgnoreCase(train)) {
 			train = "7";
-		} else if (train != null && train.startsWith("t")) { // Alexa misunderstand Charlie as a "t"-begin word.
+		} else if (train.startsWith("t")) { // Alexa misunderstand Charlie as a "t"-begin word.
 			train = "C";
-		} else if (train != null && !train.isEmpty()) {
+		} else if (!train.isEmpty()) {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
 		} else {
+			understood = false;
+		}
+
+		if (understood == false) {
 			return responseText("Sorry, I didn't get that. " +
 					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
 			);
 		}
-
+		
 		Status statusObj = currentStatus.getStatus(train);
 		if (statusObj == null) {
 			return responseText("New York City transit does not have " + train + "-train.");
