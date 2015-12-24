@@ -65,7 +65,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
 		} else {
-			return responseText("Sorry, there is a problem understanding which train you want to ask about. " +
+			return responseText("Sorry, I didn't get it. " +
 					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
 			);
 		}
