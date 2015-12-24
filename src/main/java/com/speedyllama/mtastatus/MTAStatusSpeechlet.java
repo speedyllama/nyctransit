@@ -81,7 +81,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "N";
 		} else if ("in".equalsIgnoreCase(train)) { 
 			train = "N";
-		} else if ("out".equalsIgnoreCase(train)) { 
+		} else if ("our".equalsIgnoreCase(train)) { 
 			train = "R";
 		} else if ("ass".equalsIgnoreCase(train)) { 
 			train = "S";
