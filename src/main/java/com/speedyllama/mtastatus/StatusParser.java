@@ -124,6 +124,7 @@ public class StatusParser {
     			.replaceAll("(?i)\\baves\\b", "Avenues")
     			.replaceAll("(?i)\\bavs\\b", "Avenues")
     			.replaceAll("(?i)\\bbklyn\\b", "Brooklyn")
+    			.replaceAll("(?i)\\bqns\\b", "Queens")
     			.replaceAll("(?i)\\bmon\\b", "Monday")
     			.replaceAll("(?i)\\btue\\b", "Tuesday")
     			.replaceAll("(?i)\\bwed\\b", "Wednesday")
