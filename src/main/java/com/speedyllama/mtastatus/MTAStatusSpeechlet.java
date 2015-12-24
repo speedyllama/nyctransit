@@ -202,7 +202,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		return responseText("Hi! You can ask me New York City subway status. Or, say \"help\" for help.", false);
+		return responseText("Hi! You can ask me New York City subway status. Like: What is the status of seven? Or, say \"help\" for help.", false);
 	}
 
 	@Override
