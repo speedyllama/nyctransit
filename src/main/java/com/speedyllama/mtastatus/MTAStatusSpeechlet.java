@@ -133,9 +133,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 		if ("NATO".equals(previousState)) {
 			session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
-			return responseText(
-					"Here are NATO phonetic alphabets. " + 
-					"A for Alpha. " + 
+			String nato = "A for Alpha. " + 
 					"B for Bravo. " + 
 					"C for Charlie. " + 
 					"D for Delta. " + 
@@ -149,15 +147,28 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"Q for Quebec. " + 
 					"R for Romeo. " + 
 					"S for Sierra. " + 
-					"Z for Zulu. " + 
+					"Z for Zulu. ";
+			SpeechletResponse response = responseText(
+					"Here are NATO phonetic alphabets. " + 
+					nato +
 					"Also, you may say Shuttle for S train. " + 
+					"I have also sent this list to your Alexa App. " + 
 					"Do you want to hear that again?"
 			, false);
+			
+			SimpleCard card = new SimpleCard();
+			card.setTitle("NATO Phonetic Alphabets");
+			card.setContent(nato);
+			response.setCard(card);
+			return response;
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			String train = (String)session.getAttribute("train");
 	
 			Status trainStatus = currentStatus.getStatus(train);
-			SpeechletResponse response = responseText(trainStatus.getDetail());
+			SpeechletResponse response = responseText(
+					"I have also sent the details to your Alexa App. " +
+					trainStatus.getDetail()
+			);
 			SimpleCard card = new SimpleCard();
 			card.setContent(trainStatus.getDetail());
 			card.setTitle(train + " Train Status: " + trainStatus.getStatus().toString());
