@@ -67,10 +67,6 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "A";
 		} else if ("see".equalsIgnoreCase(train)) { 
 			train = "C";
-		} else if ("tardy".equalsIgnoreCase(train)) { 
-			train = "C";
-		} else if ("toddy".equalsIgnoreCase(train)) { 
-			train = "C";
 		} else if ("i".equalsIgnoreCase(train)) { 
 			train = "E";
 		} else if ("ev".equalsIgnoreCase(train)) { 
@@ -91,6 +87,9 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "S";
 		} else if ("the".equalsIgnoreCase(train)) { 
 			train = "Z";
+		} else if (train.startsWith("t")) { // Alexa misunderstand Charlie as a "t"-begin word.
+			// WARNING: do not shortcut other options.
+			train = "C";
 		} else if (!train.isEmpty()) {
 			// Take the first character from the word.
 			train = train.substring(0, 1).toUpperCase();
