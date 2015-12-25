@@ -246,26 +246,28 @@ public class StatusParser {
     private static List<SingleTitle> extractLinesFromTitle(String title, String expectedLinesStr, String status) {
         Matcher matcher = LINES_PATTERN.matcher(title);
 
-        List<String> lines = new ArrayList<String>();
         Set<String> linesSet = new HashSet<String>();
+        String firstLine = null;
         while (matcher.find()) {
             String tmpLine = matcher.group().replaceAll("\\[", "").replaceAll("\\]", ""); 
             if (!tmpLine.equals("SIR") && tmpLine.length() > 1) {
             	tmpLine = tmpLine.substring(0, 1); // [6D] => [6]
             	title = title.replaceAll("\\[([67])D\\]", "[$1 Express]"); // [6D] => [6 Express]. Only 6 and 7 have diamonds.
             }
-            lines.add(tmpLine);
+            if (firstLine == null) {
+            	firstLine = tmpLine;
+            }
             linesSet.add(tmpLine);
         } 
         
         List<SingleTitle> singleTitles = new ArrayList<SingleTitle>();
-        if (lines.isEmpty()) {
+        if (linesSet.isEmpty()) {
             // Return an empty list if nothing found
             return singleTitles;
         }
         
         // Check if there are really multiple lines. Some statements are "fake" multiples.
-        if (lines.size() >= 2) {
+        if (linesSet.size() >= 2) {
             boolean isMultipleLines = true;
             if (!"DELAYS".equals(status)) { // Don't check delays. They are not split.
                 // Check if special terms are in the title
@@ -292,8 +294,11 @@ public class StatusParser {
         }
         
         // Only one single line
-        SingleTitle singleTitle = new SingleTitle(lines.get(0), title);
-        singleTitles.add(singleTitle);
+        if (expectedLinesStr.contains(firstLine) || 
+            ("SIR".equals(expectedLinesStr) && "SIR".equals(firstLine))) {
+        	SingleTitle singleTitle = new SingleTitle(firstLine, title);
+        	singleTitles.add(singleTitle);
+        }
         return singleTitles;
     }
 }
