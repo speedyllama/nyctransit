@@ -57,3 +57,58 @@ Travel
 Keywords
 --------
 subway New York City NYC train transit
+
+Intent Schema
+------------
+{
+  "intents": [
+    {
+      "intent": "QueryTrainStatus",
+      "slots": [
+        {
+          "name": "Train",
+          "type": "TRAIN"
+        }
+      ]
+    }
+  ]
+}
+
+Custom Slot Types
+----------------
+### Name
+TRAIN
+
+### Value
+one
+two
+three
+four
+five
+six
+seven
+alpha
+bravo
+charlie
+delta
+echo
+foxtrot
+golf
+juliette
+kilo
+lima
+mike
+november
+quebec
+romeo
+shuttle
+sierra
+zulu
+staten island rail
+
+Sample Utterances
+-----------------
+QueryTrainStatus What is the status of {Train} train
+QueryTrainStatus What is the status of {Train}
+QueryTrainStatus What's the status of {Train} train
+QueryTrainStatus What's the status of {Train}
