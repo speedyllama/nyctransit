@@ -39,7 +39,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	}
 	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
-		String train = intent.getSlot("Train").getValue();
+		String train = intent.getSlot("Train").getValue().toLowerCase();
 		
 		boolean understood = true;
 		if (train == null) {
@@ -89,6 +89,10 @@ public class MTAStatusSpeechlet implements Speechlet {
 			train = "S";
 		} else if ("the".equalsIgnoreCase(train)) { 
 			train = "Z";
+		} else if (train.startsWith("sta")) { 
+			train = "SIR";
+		} else if (train.startsWith("stockton")) { 
+			train = "SIR";
 		} else if (train.startsWith("t")) { // Alexa misunderstand Charlie as a "t"-begin word.
 			// WARNING: do not shortcut other options.
 			train = "C";
@@ -109,7 +113,12 @@ public class MTAStatusSpeechlet implements Speechlet {
 		if (statusObj == null) {
 			return responseText("New York City transit does not have " + train + "-train.");
 		} else {
-			String responseText = train + "-train is in " + statusObj.getStatus().toString() + ". ";
+			String responseText;
+			if ("SIR".equals(train)) {
+				responseText = "Staten Island Rail is in " + statusObj.getStatus().toString() + ". ";
+			} else {
+				responseText = train + "-train is in " + statusObj.getStatus().toString() + ". ";
+			}
 			String title = statusObj.getTitle();
 			if (title != null) {
 				responseText += title;
@@ -154,6 +163,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"Here are NATO phonetic alphabets. " + 
 					nato +
 					"Also, you may say Shuttle for S train. " + 
+					"And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail." +
 					"I have also sent this list to your Alexa App. " + 
 					"Do you want to hear that again?"
 			, false);

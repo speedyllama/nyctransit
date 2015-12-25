@@ -38,6 +38,8 @@ Q for Quebec.
 R for Romeo.
 S for Sierra.
 Z for Zulu.
+Also, you may say Shuttle for S train. 
+And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail.
 
 We hope this Alexa skill helps you commute. If you encounter problems, please do not hesitate to contact us:
 info@speedyllama.com
