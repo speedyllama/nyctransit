@@ -219,12 +219,12 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 	@Override
 	public void onSessionEnded(SessionEndedRequest request, Session session) throws SpeechletException {
-		// TODO Auto-generated method stub
+		// Do nothing
 	}
 
 	@Override
 	public void onSessionStarted(SessionStartedRequest request, Session session) throws SpeechletException {
-		// TODO Auto-generated method stub
+		// Do nothing
 	}
 	
 	protected SpeechletResponse responseText(String text, boolean shouldEndSession) {
