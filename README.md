@@ -46,6 +46,8 @@ info@speedyllama.com
 
 Thank you!
 
+* This Alexa Skill is not affiliated with MTA.
+
 Example Phrases
 ---------------
 Alexa, ask NYC Transit what is the status of 7?
