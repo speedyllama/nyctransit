@@ -62,6 +62,14 @@ Keywords
 --------
 subway New York City NYC train transit
 
+Testing Instructions
+-------------------
+You can check NYC subway status from this site: http://www.mta.info/
+NYC Transit Alexa Skill syncs with this site every minute.
+Use NATO phonetic alphabets for alphabetical trains, like A, C, E trains. Read the full description for details.
+
+Thanks!
+
 Intent Schema
 ------------
 {
