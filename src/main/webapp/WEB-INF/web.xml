@@ -28,9 +28,23 @@
       <load-on-startup>5</load-on-startup>
     </servlet>
 
+    <servlet>
+      <servlet-name>readme</servlet-name>
+      <description>
+        Readme
+      </description>
+      <servlet-class>com.speedyllama.mtastatus.ReadmeServlet</servlet-class>
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
       <servlet-name>alexa</servlet-name>
       <url-pattern>/alexa</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>readme</servlet-name>
+      <url-pattern>/readme</url-pattern>
     </servlet-mapping>
 
     <session-config>
