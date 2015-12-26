@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>speedy-llama-alexa-skills</groupId>
-  <artifactId>mta-status</artifactId>
+  <artifactId>nyc-transit-alexa-skill</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
-  <name>MTA Status Alexa Skill</name>
+  <name>NYC Transit Alexa Skill</name>
 
   <repositories>
     <repository>

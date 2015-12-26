@@ -4,7 +4,7 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
     <!-- General description of your web application -->
-    <display-name>MTA Status</display-name>
+    <display-name>NYC Transit</display-name>
     <description>
       An Alexa Skill to query MTA train status on Amazon Echo.
       It was written by Speedy Llama, LLC (info@speedyllama.com).
