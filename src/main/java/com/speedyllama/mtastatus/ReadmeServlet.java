@@ -19,7 +19,7 @@ public class ReadmeServlet extends HttpServlet {
 	    out.println("<h1>NYC Transit Alexa Skill</h1>");
 	    out.println("<p>Powered by Speedy Llama, LLC</p>");
 	    out.println("<a href=\"mailto:info@speedyllama.com\">Contact Us</a>");
-		super.doGet(req, resp);
+	    out.flush();
 	}
 
 }
