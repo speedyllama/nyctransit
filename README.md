@@ -38,11 +38,15 @@ Q for Quebec.
 R for Romeo.
 S for Sierra.
 Z for Zulu.
+Also, you may say Shuttle for S train. 
+And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail.
 
 We hope this Alexa skill helps you commute. If you encounter problems, please do not hesitate to contact us:
 info@speedyllama.com
 
 Thank you!
+
+* This Alexa Skill is not affiliated with MTA.
 
 Example Phrases
 ---------------
@@ -57,3 +61,58 @@ Travel
 Keywords
 --------
 subway New York City NYC train transit
+
+Intent Schema
+------------
+{
+  "intents": [
+    {
+      "intent": "QueryTrainStatus",
+      "slots": [
+        {
+          "name": "Train",
+          "type": "TRAIN"
+        }
+      ]
+    }
+  ]
+}
+
+Custom Slot Types
+----------------
+### Name
+TRAIN
+
+### Value
+one
+two
+three
+four
+five
+six
+seven
+alpha
+bravo
+charlie
+delta
+echo
+foxtrot
+golf
+juliette
+kilo
+lima
+mike
+november
+quebec
+romeo
+shuttle
+sierra
+zulu
+staten island rail
+
+Sample Utterances
+-----------------
+QueryTrainStatus What is the status of {Train} train
+QueryTrainStatus What is the status of {Train}
+QueryTrainStatus What's the status of {Train} train
+QueryTrainStatus What's the status of {Train}

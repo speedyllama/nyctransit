@@ -54,4 +54,12 @@ public class TestStatusParser {
 		assertEquals("Due to signal problems at 125 Street, the following service changes are in effect: Some northbound [4] and [5] trains are running local from 42 Street- Grand Central to 125 Street. Northbound [4], [5] and [6] trains are running with delays. Allow additional travel time. [6 Express] Brooklyn Bridge-bound trains run local from Parkchester to 3 Avenue-138 Street. [6] The last stop for alternate trains headed toward Pelham Bay Park is 3 Avenue-138 Street.", statusMap.get("6").getTitle());
 		assertEquals("Due to signal problems at 125 Street, the following service changes are in effect: Some northbound [4] and [5] trains are running local from 42 Street- Grand Central to 125 Street. Northbound [4], [5] and [6] trains are running with delays. Allow additional travel time. [6 Express] Brooklyn Bridge-bound trains run local from Parkchester to 3 Avenue-138 Street. Days, 10:30 AM to 1 PM, Monday to Thursday, December 21 - 24. Please allow additional travel time. [6] The last stop for alternate trains headed toward Pelham Bay Park is 3 Avenue-138 Street. Days, 10:30 AM to 3 PM, Monday to Thursday, December 21 - 24. Please allow additional travel time in the Bronx.", statusMap.get("6").getDetail());
 	}
+
+	@Test
+	public void testMultipleOccurrence() throws MTAStatusException {
+		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151224T1854.xml").toString()));
+		assertEquals("Due to a train with mechanical problems at Queens Plaza. The following service changes are in effect: Southbound [R] trains are running on the [F] line from 36 Street (Queens) to W 4 Street, and then via the [D] train to 36 Street (Brooklyn). Some northbound [R] trains are terminating at 57 Street-7 Avenue. Expect delays on the [F] and [D] trains. Allow additional travel time.   .", statusMap.get("R").getTitle());
+		// TODO: This test fails. We are not sure about the business logic so far. We will push it to next versions.
+		//assertEquals(TrainStatus.SERVICE_CHANGE, statusMap.get("D").getStatus());
+	}
 }

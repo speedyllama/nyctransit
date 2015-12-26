@@ -4,7 +4,7 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 <web-app>
     <!-- General description of your web application -->
-    <display-name>MTA Status</display-name>
+    <display-name>NYC Transit</display-name>
     <description>
       An Alexa Skill to query MTA train status on Amazon Echo.
       It was written by Speedy Llama, LLC (info@speedyllama.com).
@@ -28,9 +28,23 @@
       <load-on-startup>5</load-on-startup>
     </servlet>
 
+    <servlet>
+      <servlet-name>readme</servlet-name>
+      <description>
+        Readme
+      </description>
+      <servlet-class>com.speedyllama.mtastatus.ReadmeServlet</servlet-class>
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
       <servlet-name>alexa</servlet-name>
       <url-pattern>/alexa</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>readme</servlet-name>
+      <url-pattern>/readme</url-pattern>
     </servlet-mapping>
 
     <session-config>
