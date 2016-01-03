@@ -31,10 +31,13 @@ public class MTAStatusSpeechlet implements Speechlet {
 			return responseYes(intent, session);
 		} else if ("AMAZON.NoIntent".equals(intent.getName())) {
 			return responseNo(intent, session);
-		} else if ("AMAZON.HelpIntent".equals(intent.getName())){
+		} else if ("AMAZON.HelpIntent".equals(intent.getName())) {
 			return help(intent, session);
+		} else if ("AMAZON.CancelIntent".equals(intent.getName()) || 
+			"AMAZON.StopIntent".equals(intent.getName())) {
+			return responseText("See you!");
 		} else {
-			return responseText("Sorry, I didn't get that. Please try again.");
+			return responseText("Sorry, I didn't get that. Please try again.", false);
 		}
 	}
 	
