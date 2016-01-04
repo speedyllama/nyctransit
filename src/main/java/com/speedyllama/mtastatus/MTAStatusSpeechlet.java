@@ -37,7 +37,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 			"AMAZON.StopIntent".equals(intent.getName())) {
 			return responseText("See you!");
 		} else {
-			return responseText("Sorry, I didn't get that. Please try again.", false);
+			return responseText("Sorry, I didn't get that. Please try again now.", false);
 		}
 	}
 	
@@ -113,13 +113,14 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 		if (understood == false) {
 			return responseText("Sorry, I didn't get that. " +
-					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
+					"If you are asking about an alphabetical train, try use another word that begins with that alphabet. Please try again now. ",
+					false
 			);
 		}
 		
 		Status statusObj = currentStatus.getStatus(train);
 		if (statusObj == null) {
-			return responseText("New York City transit does not have " + train + "-train. Please try again. ", false);
+			return responseText("New York City transit does not have " + train + "-train. Please try again now. ", false);
 		} else {
 			String responseText;
 			if ("SIR".equals(train)) {
