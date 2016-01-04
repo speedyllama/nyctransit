@@ -42,9 +42,14 @@ public class MTAStatusSpeechlet implements Speechlet {
 	}
 	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
-		String train = intent.getSlot("Train").getValue().toLowerCase();
-		
+		String train = null;
 		boolean understood = true;
+		try {
+			train = intent.getSlot("Train").getValue().toLowerCase();
+		} catch (NullPointerException ne) {
+			understood = false;
+		}
+		
 		if (train == null) {
 			understood = false;
 		} else if ("one".equalsIgnoreCase(train)) {
