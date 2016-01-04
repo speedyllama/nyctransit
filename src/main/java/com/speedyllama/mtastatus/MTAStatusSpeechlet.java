@@ -31,17 +31,25 @@ public class MTAStatusSpeechlet implements Speechlet {
 			return responseYes(intent, session);
 		} else if ("AMAZON.NoIntent".equals(intent.getName())) {
 			return responseNo(intent, session);
-		} else if ("AMAZON.HelpIntent".equals(intent.getName())){
+		} else if ("AMAZON.HelpIntent".equals(intent.getName())) {
 			return help(intent, session);
+		} else if ("AMAZON.CancelIntent".equals(intent.getName()) || 
+			"AMAZON.StopIntent".equals(intent.getName())) {
+			return responseText("See you!");
 		} else {
-			return responseText("Sorry, I didn't get that. Please try again.");
+			return responseText("Sorry, I didn't get that. Please try again now. Like: What is the status of seven?", false);
 		}
 	}
 	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
-		String train = intent.getSlot("Train").getValue().toLowerCase();
-		
+		String train = null;
 		boolean understood = true;
+		try {
+			train = intent.getSlot("Train").getValue().toLowerCase();
+		} catch (NullPointerException ne) {
+			understood = false;
+		}
+		
 		if (train == null) {
 			understood = false;
 		} else if ("one".equalsIgnoreCase(train)) {
@@ -105,13 +113,14 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 		if (understood == false) {
 			return responseText("Sorry, I didn't get that. " +
-					"If you are asking about an alphabetical train, try use another word that begins with that alphabet." 
+					"If you are asking about an alphabetical train, try use another word that begins with that alphabet. Please try again now. ",
+					false
 			);
 		}
 		
 		Status statusObj = currentStatus.getStatus(train);
 		if (statusObj == null) {
-			return responseText("New York City transit does not have " + train + "-train.");
+			return responseText("New York City transit does not have " + train + "-train. Please try again now. ", false);
 		} else {
 			String responseText;
 			if ("SIR".equals(train)) {
@@ -163,7 +172,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"Here are NATO phonetic alphabets. " + 
 					nato +
 					"Also, you may say Shuttle for S train. " + 
-					"And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail." +
+					"And, please say the full name: Staten Island Rail, not S-I-R, for Staten Island Rail. " +
 					"I have also sent this list to your Alexa App. " + 
 					"Do you want to hear that again?"
 			, false);
