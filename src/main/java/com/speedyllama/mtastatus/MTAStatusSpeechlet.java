@@ -172,7 +172,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"Here are NATO phonetic alphabets. " + 
 					nato +
 					"Also, you may say Shuttle for S train. " + 
-					"And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail." +
+					"And, please say the full name: Staten Island Rail, not SIR, for Staten Island Rail. " +
 					"I have also sent this list to your Alexa App. " + 
 					"Do you want to hear that again?"
 			, false);
