@@ -204,7 +204,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 
 		if ("NATO".equals(previousState)) {
-			return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
+			return responseText("Which train would you like status for?", false);
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			return responseText("See you!");
 		}
