@@ -124,7 +124,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 		if (understood == false) {
 			return responseText("Sorry, I didn't get that. " +
-					"Sorry, I didn't get that. If you are asking about an alphabetical train, try using another word that starts with the letter train you want. Which train did you want?",
+					"If you are asking about an alphabetical train, try using another word that starts with the letter train you want. Which train would you like status for?",
 					false
 			);
 		}
