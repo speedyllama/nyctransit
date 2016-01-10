@@ -41,6 +41,15 @@ public class MTAStatusSpeechlet implements Speechlet {
 		}
 	}
 	
+	private boolean isInteger(String str) {
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException nfe) {
+			return false;
+		}
+	}
+	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
 		String train = null;
 		boolean understood = true;
@@ -52,6 +61,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 		
 		if (train == null) {
 			understood = false;
+		} else if (isInteger(train)) {
+			// Number: go to the next step
 		} else if ("one".equalsIgnoreCase(train)) {
 			train = "1";
 		// Alexa is not smart one number "two".
