@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <!-- General description of your web application -->
+    <display-name>NYC Transit</display-name>
+    <description>
+      An Alexa Skill to query MTA train status on Amazon Echo.
+      It was written by Speedy Llama, LLC (info@speedyllama.com).
+    </description>
+
+    <context-param>
+      <param-name>webmaster</param-name>
+      <param-value>admin@speedyllama.com</param-value>
+      <description>
+        The EMAIL address of the administrator to whom questions
+        and comments about this application should be addressed.
+      </description>
+    </context-param>
+
+    <servlet>
+      <servlet-name>alexa</servlet-name>
+      <description>
+        Alexa endpoint
+      </description>
+      <servlet-class>com.speedyllama.mtastatus.MTAStatusServlet</servlet-class>
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
+    <servlet>
+      <servlet-name>readme</servlet-name>
+      <description>
+        Readme
+      </description>
+      <servlet-class>com.speedyllama.mtastatus.ReadmeServlet</servlet-class>
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+      <servlet-name>alexa</servlet-name>
+      <url-pattern>/alexa</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>readme</servlet-name>
+      <url-pattern>/readme</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+      <session-timeout>1</session-timeout>
+    </session-config>
+</web-app>

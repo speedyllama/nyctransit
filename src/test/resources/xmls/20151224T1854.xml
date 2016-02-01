@@ -1,0 +1,771 @@
+<service><responsecode>0</responsecode><timestamp>12/24/2015 6:54:00 PM</timestamp><subway>
+  <line>
+    <name>123</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>456</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>7</name>
+    <status>DELAYS</status>
+    <text>
+                    &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:13PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  &lt;P&gt;Due to signal problems at &lt;STRONG&gt;Times Sq-42 St&lt;/STRONG&gt;, the following service changes are in effect:&lt;/P&gt;
+&lt;P&gt;[7] trains are running with delays in both directions. &lt;/P&gt;
+&lt;P&gt;There is no Main St-bound [7D] express service.&lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:13PM</Time>
+  </line>
+  <line>
+    <name>ACE</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>BDFM</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                    &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:31PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  &lt;P&gt;Due to a train with mechanical problems at &lt;STRONG&gt;Queens Plaza&lt;/STRONG&gt;. The following service changes are in effect:&lt;/P&gt;
+&lt;P&gt;Southbound [R] trains are running on the [F] line from &lt;STRONG&gt;36 St&lt;/STRONG&gt; (QNS) to &lt;STRONG&gt;W 4 St&lt;/STRONG&gt;, and then via the [D] train to &lt;STRONG&gt;36 St &lt;/STRONG&gt;(BKLYN).&lt;/P&gt;
+&lt;P&gt;Some northbound [R] trains are terminating at &lt;STRONG&gt;57 St-7 Av&lt;/STRONG&gt;. &lt;/P&gt;
+&lt;P&gt;Expect delays on the [F] and [D] trains. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.  &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+                &lt;br/&gt;&lt;br/&gt;
+              
+                    &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:10PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  &lt;P&gt;Due to signal problems at &lt;STRONG&gt;Bay Pkwy&lt;/STRONG&gt;, northbound [F] trains are running with delays. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:31PM</Time>
+  </line>
+  <line>
+    <name>G</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>JZ</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>L</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>NQR</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                    &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:31PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  &lt;P&gt;Due to a train with mechanical problems at &lt;STRONG&gt;Queens Plaza&lt;/STRONG&gt;. The following service changes are in effect:&lt;/P&gt;
+&lt;P&gt;Southbound [R] trains are running on the [F] line from &lt;STRONG&gt;36 St&lt;/STRONG&gt; (QNS) to &lt;STRONG&gt;W 4 St&lt;/STRONG&gt;, and then via the [D] train to &lt;STRONG&gt;36 St &lt;/STRONG&gt;(BKLYN).&lt;/P&gt;
+&lt;P&gt;Some northbound [R] trains are terminating at &lt;STRONG&gt;57 St-7 Av&lt;/STRONG&gt;. &lt;/P&gt;
+&lt;P&gt;Expect delays on the [F] and [D] trains. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.  &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:31PM</Time>
+  </line>
+  <line>
+    <name>S</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>SIR</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+</subway><bus>
+  <line>
+    <name>B1 - B84</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:16PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;B25 &lt;/STRONG&gt;buses are detoured, due to road work at Water St and Main St. &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Eastbound:&lt;/STRONG&gt; Via Front St, right onto Washington St, right onto York St, left onto Front St, left onto Old Fulton St and regular route. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time. &lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:15PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                Expect delays on all &lt;STRONG&gt;Local&lt;/STRONG&gt; and &lt;STRONG&gt;Express&lt;/STRONG&gt; Brooklyn bus service due to heavy holiday traffic. &lt;BR&gt;&lt;BR&gt;Allow additional travel time.
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112033);&gt;
+&lt;b&gt;B20, B25, B83, Q24 and Q56 buses may experience delays due construction at Broadway Junction
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112033 class="plannedWorkDetail" &gt;&lt;/b&gt;Until further notice
+&lt;br&gt;
+&lt;br&gt;&amp;#149; &lt;/font&gt;Please allow additional travel time.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/bkln/b020cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;B20&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;, and &lt;a href=http://web.mta.info/nyct/bus/schedule/bkln/b083cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;B83&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate overnight.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;          &lt;/b&gt;&lt;a href=http://bustime.mta.info/ target=_blank&gt;&lt;img height=30px src=http://web.mta.info/nyct/images/Bus_Time_logo.png&gt;&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(110429);&gt;
+&lt;b&gt;B15 - Eastbound buses detoured from Pan Am Road at Lefferts Blvd due to road work&lt;br clear=left&gt;No stops missed
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 110429 class="plannedWorkDetail" &gt;&lt;/b&gt;Until further notice
+&lt;br&gt;
+&lt;br&gt;&amp;#149; Please allow additional travel time.
+&lt;br&gt;&lt;/font&gt;&lt;b&gt;          &lt;/b&gt;&lt;a href=http://bustime.mta.info/#b15 target=_blank&gt;&lt;img height=30px src=http://web.mta.info/nyct/images/Bus_Time_logo.png&gt;&lt;/a&gt;
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:16PM</Time>
+  </line>
+  <line>
+    <name>B100 - B103</name>
+    <status>DELAYS</status>
+    <text>
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:15PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                Expect delays on all &lt;STRONG&gt;Local&lt;/STRONG&gt; and &lt;STRONG&gt;Express&lt;/STRONG&gt; Brooklyn bus service due to heavy holiday traffic. &lt;BR&gt;&lt;BR&gt;Allow additional travel time.
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:15PM</Time>
+  </line>
+  <line>
+    <name>BM1 - BM5</name>
+    <status>DELAYS</status>
+    <text>
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:15PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                Expect delays on all &lt;STRONG&gt;Local&lt;/STRONG&gt; and &lt;STRONG&gt;Express&lt;/STRONG&gt; Brooklyn bus service due to heavy holiday traffic. &lt;BR&gt;&lt;BR&gt;Allow additional travel time.
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:15PM</Time>
+  </line>
+  <line>
+    <name>BX1 - BX55</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>BXM1 - BXM18</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>M1 - M116</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:13PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;M15&lt;/STRONG&gt; and &lt;STRONG&gt;SBS15&lt;/STRONG&gt; buses are detoured due to FDNY activity on Allen St and Grand St. &lt;/P&gt;
+&lt;P&gt;Detour is as follows:&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Northbound&lt;/STRONG&gt;: Via Pike St, right on East Broadway, left on Essex St, left on Houston St, right on 1 Av and regular route. &lt;/P&gt;
+&lt;P&gt;All corresponding stops will be made. &lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112035);&gt;
+&lt;b&gt;M5/M5 &lt;/b&gt;LTD &lt;b&gt;and M7&lt;/b&gt; -&lt;b&gt; Northbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112035 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 6 Av at 49 St or 50 St.  Please use the nearby stop &lt;b&gt;on 51 St&lt;/b&gt; instead.
+&lt;br&gt;Local buses also stop &lt;b&gt;on 47 St&lt;/b&gt;.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m005cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M5 LTD&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;a/&gt; buses do not operate on weekends.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                             [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(113559);&gt;
+&lt;b&gt;M34 &lt;/b&gt;SBS&lt;b&gt;/M34A &lt;/b&gt;SBS&lt;b&gt; - Westbound bus stop on 34 St at 7 Av temporarily closed
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 113559 class="plannedWorkDetail" &gt;&lt;/b&gt;Until further notice
+&lt;br&gt;
+&lt;br&gt;Due to construction, please use nearby stop &lt;b&gt;on 34 St &lt;/b&gt;at 8 Av.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m034scur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M34 SBS&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; and &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m034scur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M34A SBS&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate overnights.
+&lt;br&gt;&lt;b&gt;                                       [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112029);&gt;
+&lt;b&gt;M2/M2 &lt;/b&gt;LTD&lt;b&gt;, M3 and M5/M5 &lt;/b&gt;LTD&lt;b&gt; - Southbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112029 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 5 Av at 50 St.  Please use the nearby stop&lt;b&gt; on 53 St&lt;/b&gt; instead.
+&lt;br&gt;Local buses also stop &lt;b&gt;on 47 St&lt;/b&gt;.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                              [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112016);&gt;
+&lt;b&gt;M1/M1&lt;/b&gt; LTD&lt;b&gt;, M4/M4 &lt;/b&gt;LTD &lt;b&gt;Southbound and Q32 Westbound - Holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112016 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 5 Av at 49 St.  Please use the nearby stop &lt;b&gt;on 52 St &lt;/b&gt;instead.
+&lt;br&gt;Local buses also stop &lt;b&gt;on 46 St&lt;/b&gt;.    
+&lt;br&gt;
+&lt;br&gt;Reminder: &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m001cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M1 LTD&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;a/&gt; and &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m004cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M4 LTD&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;a/&gt;&lt;b&gt; &lt;/b&gt;buses do not operate on weekends.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                            [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:13PM</Time>
+  </line>
+  <line>
+    <name>Q1 - Q113</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:49PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q32, Q60, &lt;/STRONG&gt;&lt;STRONG&gt;QM1, QM4, QM5, QM6, QM24, X63, X64&lt;/STRONG&gt; and &lt;STRONG&gt;X68&lt;/STRONG&gt; buses are running with delays in both directions due to a vehicular accident on Queens Blvd and 40 St.&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; and &lt;STRONG&gt;Q60&lt;/STRONG&gt; buses are detoured. &lt;/P&gt;
+&lt;P&gt;Detour is as follows: &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; &lt;STRONG&gt;and&lt;/STRONG&gt; &lt;STRONG&gt;Q60&lt;/STRONG&gt; &lt;STRONG&gt;Eastbound:&lt;/STRONG&gt; Via Queens Blvd, right on 39 St, left on 47 Av, left on 43 St, right on Queens Blvd and regular route. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time. &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:15PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q113-Ltd&lt;/STRONG&gt; and &lt;STRONG&gt;Q114-Ltd&lt;/STRONG&gt; buses are running with delays in both directions, due to heavy traffic on Rockaway Blvd between Hook Creek Blvd and Route 878. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:15PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;Due to heavy traffic at the &lt;STRONG&gt;Queens Center Mall&lt;/STRONG&gt;, &lt;STRONG&gt;Q11, Q21, Q52&lt;/STRONG&gt;, &lt;STRONG&gt;Q23, Q29, Q38, Q53, Q58, Q72&lt;/STRONG&gt; and &lt;STRONG&gt;Q88&lt;/STRONG&gt; buses are running with delays. &lt;/P&gt;
+&lt;P&gt;In addition &lt;STRONG&gt;Q88&lt;/STRONG&gt; buses are detoured, detour is as follows:&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Westbound:&lt;/STRONG&gt; Via Horace Harding Expressway, right onto 99 St, left onto 57 Av and regular route. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:14PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q12, Q13, Q15, Q15A, Q16, Q17, Q19, Q20A/B, Q25, Q26, Q27, Q28, Q34, Q44-SBS, Q50&lt;/STRONG&gt; and &lt;STRONG&gt;Q65 &lt;/STRONG&gt; local buses are running with delays, due to heavy holiday traffic in the Downtown Flushing area. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:13PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q113&lt;/STRONG&gt; southbound buses are running on the &lt;STRONG&gt;Q114&lt;/STRONG&gt; route, due to heavy traffic on Rockaway Blvd from Guy R Brewer Blvd to Nassau Expy. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time.&lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112016);&gt;
+&lt;b&gt;M1/M1&lt;/b&gt; LTD&lt;b&gt;, M4/M4 &lt;/b&gt;LTD &lt;b&gt;Southbound and Q32 Westbound - Holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112016 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 5 Av at 49 St.  Please use the nearby stop &lt;b&gt;on 52 St &lt;/b&gt;instead.
+&lt;br&gt;Local buses also stop &lt;b&gt;on 46 St&lt;/b&gt;.    
+&lt;br&gt;
+&lt;br&gt;Reminder: &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m001cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M1 LTD&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;a/&gt; and &lt;a href=http://web.mta.info/nyct/bus/schedule/manh/m004cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;M4 LTD&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;a/&gt;&lt;b&gt; &lt;/b&gt;buses do not operate on weekends.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                            [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112033);&gt;
+&lt;b&gt;B20, B25, B83, Q24 and Q56 buses may experience delays due construction at Broadway Junction
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112033 class="plannedWorkDetail" &gt;&lt;/b&gt;Until further notice
+&lt;br&gt;
+&lt;br&gt;&amp;#149; &lt;/font&gt;Please allow additional travel time.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/bkln/b020cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;B20&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;, and &lt;a href=http://web.mta.info/nyct/bus/schedule/bkln/b083cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;B83&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate overnight.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;          &lt;/b&gt;&lt;a href=http://bustime.mta.info/ target=_blank&gt;&lt;img height=30px src=http://web.mta.info/nyct/images/Bus_Time_logo.png&gt;&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:49PM</Time>
+  </line>
+  <line>
+    <name>QM1 - QM25</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:49PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q32, Q60, &lt;/STRONG&gt;&lt;STRONG&gt;QM1, QM4, QM5, QM6, QM24, X63, X64&lt;/STRONG&gt; and &lt;STRONG&gt;X68&lt;/STRONG&gt; buses are running with delays in both directions due to a vehicular accident on Queens Blvd and 40 St.&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; and &lt;STRONG&gt;Q60&lt;/STRONG&gt; buses are detoured. &lt;/P&gt;
+&lt;P&gt;Detour is as follows: &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; &lt;STRONG&gt;and&lt;/STRONG&gt; &lt;STRONG&gt;Q60&lt;/STRONG&gt; &lt;STRONG&gt;Eastbound:&lt;/STRONG&gt; Via Queens Blvd, right on 39 St, left on 47 Av, left on 43 St, right on Queens Blvd and regular route. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time. &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112041);&gt;
+&lt;b&gt;QM15 - Eastbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112041 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 6 Av at 49 St or 50 St.  Please use the nearby stop &lt;b&gt;on 6 Av &lt;/b&gt;at 48 St.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;:  &lt;a href=http://web.mta.info/busco/schedules/qm015cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM15&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate Sundays or overnights.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                              [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112042);&gt;
+&lt;b&gt;QM10, QM12 and QM24 - Eastbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112042 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 6 Av at 49 St or 50 St.  Please use the nearby stop &lt;b&gt;on 6 Av &lt;/b&gt;at 51 St instead.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;:  &lt;a href=http://web.mta.info/busco/schedules/qm010cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM10&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt;, &lt;a href=http://web.mta.info/busco/schedules/qm012cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM12&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; and &lt;a href=http://web.mta.info/busco/schedules/qm024cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM24&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate overnights.
+&lt;br&gt;&lt;b&gt;                                               [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112040);&gt;
+&lt;b&gt;QM1, QM5, QM6, QM15, QM16, QM17 and QM18 - Eastbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112040 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 6 Av at 49 St or 50 St.  Please use the nearby stop &lt;b&gt;on 6 Av &lt;/b&gt;at 48 St instead.
+&lt;br&gt;
+&lt;br&gt;Reminder:  &lt;a href=http://web.mta.info/busco/schedules/qm16cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM16, QM17&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; and &lt;a href=http://web.mta.info/busco/schedules/qm18cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;QM18&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate weekends &lt;b&gt;&lt;i&gt;and/or&lt;/b&gt;&lt;/i&gt; overnights.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule.
+&lt;br&gt;&lt;b&gt;                                              [TP]  
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:49PM</Time>
+  </line>
+  <line>
+    <name>S40 - S98</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>x1 - x68</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                  &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                  &lt;span class="DateStyle"&gt;
+                  &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:49PM
+                  &lt;/span&gt;
+                  &lt;br/&gt;
+                  &lt;br/&gt;
+                &lt;P&gt;&lt;STRONG&gt;Q32, Q60, &lt;/STRONG&gt;&lt;STRONG&gt;QM1, QM4, QM5, QM6, QM24, X63, X64&lt;/STRONG&gt; and &lt;STRONG&gt;X68&lt;/STRONG&gt; buses are running with delays in both directions due to a vehicular accident on Queens Blvd and 40 St.&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; and &lt;STRONG&gt;Q60&lt;/STRONG&gt; buses are detoured. &lt;/P&gt;
+&lt;P&gt;Detour is as follows: &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Q32&lt;/STRONG&gt; &lt;STRONG&gt;and&lt;/STRONG&gt; &lt;STRONG&gt;Q60&lt;/STRONG&gt; &lt;STRONG&gt;Eastbound:&lt;/STRONG&gt; Via Queens Blvd, right on 39 St, left on 47 Av, left on 43 St, right on Queens Blvd and regular route. &lt;/P&gt;
+&lt;P&gt;Allow additional travel time. &lt;/P&gt;
+&lt;P&gt; &lt;/P&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            
+                  &lt;span class="TitlePlannedWork" &gt;Planned Detour&lt;/span&gt;
+                  &lt;br/&gt;
+                &lt;a class="plannedWorkDetailLink" onclick=ShowHide(112037);&gt;
+&lt;b&gt;X1, X7 and X9 - Southbound holiday bus stop changes in Midtown
+&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 112037 class="plannedWorkDetail" &gt;&lt;/b&gt;All times, until Saturday, Jan 2, 2016
+&lt;br&gt;
+&lt;br&gt;Buses will not stop on 50 St at Rockefeller Plaza or on 5 Av at 48 St.
+&lt;br&gt;Please use the nearby temporary stop &lt;b&gt;on 7 Av &lt;/b&gt;at 50 St.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/xpress/x001cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;X7&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; and &lt;a href=http://web.mta.info/nyct/bus/schedule/xpress/x001cur.pdftarget=_blank&gt;&lt;font color=#0000FF&gt;&lt;b&gt;&lt;u&gt;X9&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;&lt;/a&gt; buses do not operate on weekends.
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt;Note&lt;/b&gt;: Friday, Dec 25 and Jan 1, buses operate on a Sunday schedule
+&lt;br&gt;&lt;b&gt;                                           [TP]
+&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;
+              &lt;br/&gt;
+              &lt;br/&gt;
+            </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:49PM</Time>
+  </line>
+</bus><BT>
+  <line>
+    <name>Bronx-Whitestone</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Cross Bay</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Henry Hudson</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Hugh L. Carey</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Marine Parkway</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Queens Midtown</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Robert F. Kennedy</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                    &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:00AM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  New Traffic Pattern in Affect -Manhattan-bound traffic exiting from the Robert F. Kennedy Bridge to E.125 Street, is being diverted onto a temporary ramp. Motorists may experience delays and are advised to allow extra travel time.
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:00AM</Time>
+  </line>
+  <line>
+    <name>Throgs Neck</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Verrazano-Narrows</name>
+    <status>SERVICE CHANGE</status>
+    <text>
+                    &lt;span class="TitleServiceChange" &gt;Service Change&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:00AM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  &lt;FONT size=3&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black; sans-serif: ; ns: 'urn:schemas-microsoft-com:office:office' /&gt;&lt;/SPAN&gt;&lt;/FONT&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style=" FONT-FAMILY: ?Calibri?,sans-serif; COLOR: black;&lt; FONT&gt;&lt;/SPAN&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black; 10PM: " FONT-FAMILY: ?Calibri?,sans-serif; COLOR: black;&lt; FONT&gt;&lt;/SPAN&gt;&lt;FONT size=3&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black; sans-serif: " FONT-FAMILY: ?Calibri?,sans-serif; COLOR: black;&lt; FONT black;?Calibri?,sans-serif;&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;SPAN&gt;&lt;U&gt;Monday thru Thursday:&lt;/U&gt; &lt;/SPAN&gt;&lt;/STRONG&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;New Traffic Pattern: &lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;Upper Level: Mon -Thur 5 AM to 9:30 AM (3) Lanes Bklyn-bnd. (2) Lanes SI-bound.&lt;BR&gt;2:30 PM to 10PM (3) Lanes SI-bound. (2) Lanes Bklyn-bnd.&lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;&lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;&lt;SPAN&gt;&lt;U&gt;Friday:&lt;/U&gt; &lt;/SPAN&gt;&lt;/STRONG&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;New Traffic Pattern: &lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;Upper Level: Mon -Thur 5 AM to 9:30 AM (3) Lanes Bklyn-bnd. (2) Lanes SI-bound.&lt;BR&gt;1:30 PM to 11:59 PM (3) Lanes SI-bound. (2) Lanes Bklyn-bnd.&lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt; &lt;/SPAN&gt;&lt;SPAN&gt;&lt;STRONG&gt;&lt;U&gt;Saturday and Sunday:&lt;/U&gt; &lt;/STRONG&gt;&lt;/SPAN&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;New Traffic Pattern: &lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;SPAN style="FONT-FAMILY: 'Calibri',sans-serif; COLOR: black"&gt;Upper Level: Three (3) Lanes Staten Island-bound. Two (2) Lanes Brooklyn-bound.&lt;/SPAN&gt;&lt;/P&gt;
+&lt;P&gt;&lt;/SPAN&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:00AM</Time>
+  </line>
+</BT><LIRR>
+  <line>
+    <name>Babylon</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>City Terminal Zone</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Far Rockaway</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Hempstead</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Long Beach</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Montauk</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Oyster Bay</name>
+    <status>DELAYS</status>
+    <text>
+                    &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 4:52PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  The 4:20PM train from Oyster Bay due Jamaica at 5:13PM is being delayed west of Glen Street due to an unauthorized person on the tracks.
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 4:52PM</Time>
+  </line>
+  <line>
+    <name>Port Jefferson</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Port Washington</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Ronkonkoma</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>West Hempstead</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+</LIRR><MetroNorth>
+  <line>
+    <name>Hudson</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Harlem</name>
+    <status>DELAYS</status>
+    <text>
+                    &lt;span class="TitleDelay"&gt;Delays&lt;/span&gt;
+                    &lt;span class="DateStyle"&gt;
+                    &amp;nbsp;Posted:&amp;nbsp;12/24/2015&amp;nbsp; 6:22PM
+                    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;
+                  Southbound Harlem Line Service is experiencing 5 to 10 minute delays due to necessary track work in the Bronx. Please listen for announcements at your station.
+                &lt;br/&gt;&lt;br/&gt;
+              </text>
+    <Date>12/24/2015</Date>
+    <Time> 6:22PM</Time>
+  </line>
+  <line>
+    <name>Wassaic</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>New Haven</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>New Canaan</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Danbury</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Waterbury</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Pascack Valley</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+  <line>
+    <name>Port Jervis</name>
+    <status>GOOD SERVICE</status>
+    <text />
+    <Date></Date>
+    <Time></Time>
+  </line>
+</MetroNorth></service>
+
