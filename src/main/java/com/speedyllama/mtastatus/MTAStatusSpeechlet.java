@@ -41,6 +41,15 @@ public class MTAStatusSpeechlet implements Speechlet {
 		}
 	}
 	
+	private boolean isInteger(String str) {
+		try {
+			Integer.parseInt(str);
+			return true;
+		} catch (NumberFormatException nfe) {
+			return false;
+		}
+	}
+	
 	protected SpeechletResponse responseShortStatus(Intent intent, Session session) {
 		String train = null;
 		boolean understood = true;
@@ -52,6 +61,8 @@ public class MTAStatusSpeechlet implements Speechlet {
 		
 		if (train == null) {
 			understood = false;
+		} else if (isInteger(train)) {
+			// Number: go to the next step
 		} else if ("one".equalsIgnoreCase(train)) {
 			train = "1";
 		// Alexa is not smart one number "two".
@@ -113,7 +124,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 
 		if (understood == false) {
 			return responseText("Sorry, I didn't get that. " +
-					"If you are asking about an alphabetical train, try use another word that begins with that alphabet. Please try again now. ",
+					"If you are asking about an alphabetical train, try using another word that starts with the letter train you want. Which train would you like status for?",
 					false
 			);
 		}
@@ -204,7 +215,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, null);
 
 		if ("NATO".equals(previousState)) {
-			return responseText("Please ask me subway status now. Like: What is the status of seven?", false);
+			return responseText("Which train would you like status for?", false);
 		} else if ("TRAIN_QUERY".equals(previousState)) {
 			return responseText("See you!");
 		}
@@ -213,9 +224,9 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	private SpeechletResponse help(Intent intent, Session session) {
 		session.setAttribute(Constants.ATTR_PREVIOUS_STATE, "NATO");
-		return responseText("Hi! You can ask me New York City subway status. " + 
-				"Like: What is the status of seven? " +
-				"For alphabetical trains, like A, C, E trains, use a word that begins with that alphabet instead. " +
+		return responseText("You can ask me New York City subway status like this: " + 
+				"What is the status of seven? " +
+				"For alphabetical trains, like A, C, E trains, use a word that begins with that letter of the alphabet instead. " +
 				"For example, for A train, say: What is the status of Alpha? NATO phonetic alphabets are recommended. " +
 				"Do you want to hear a list of NATO phonetic alphabets?"
 		, false);
@@ -223,7 +234,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 	
 	@Override
 	public SpeechletResponse onLaunch(LaunchRequest request, Session session) throws SpeechletException {
-		return responseText("Hi! You can ask me New York City subway status. Like: What is the status of seven? Or, say \"help\" for help.", false);
+		return responseText("Hi! Welcome to NYC Transit. You can ask me New York City subway status. Like: What is the status of seven? Or, you may ask for help.", false);
 	}
 
 	@Override
