@@ -62,4 +62,11 @@ public class TestStatusParser {
 		// TODO: This test fails. We are not sure about the business logic so far. We will push it to next versions.
 		//assertEquals(TrainStatus.SERVICE_CHANGE, statusMap.get("D").getStatus());
 	}
+
+	@Test
+	public void testNonAscii() throws MTAStatusException {
+		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151226T1013.xml").toString()));
+		String title = statusMap.get("7").getTitle();
+		// TODO: special characters in 7
+	}
 }
