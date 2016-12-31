@@ -37,6 +37,7 @@ N for November.
 Q for Quebec.
 R for Romeo.
 S for Sierra.
+W for Whiskey.
 Z for Zulu.
 Also, you may say Shuttle for S train. 
 And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail.
@@ -130,6 +131,7 @@ quebec
 romeo
 shuttle
 sierra
+whiskey
 zulu
 staten island rail
 
