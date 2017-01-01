@@ -13,6 +13,44 @@ Ask me New York City subway status.
 
 Full Skill Description
 ----------------------
+12/31/2016 Updated to Version 1.1:
+"W" train support added.
+
+This is an open source project! Issue reports, forks and pull requests are always welcome!
+https://github.com/speedyllama/nyctransit
+
+Response To Comments:
+
+Dear users,
+
+Thank you for using NYC Transit Echo App. Special thanks to those who left a comment. 
+From the comments, we understand that there are three common issues:
+
+1. The intent sentence is wordy.
+2. A word rather than a single character is needed for alphabetical trains.
+3. Recognizing might not be accurate sometimes.
+
+To be frank, these issues are mostly due to one single reason: the official Amazon Echo SDK does not support alphabet recognition.
+For this reason, we tried our best to figure out the best combination of intent words to accommodate alphabetical trains.
+And, the intent sentence we have been using is the best so far.
+If your voice is not recognized accurately, try using a different word. And, always stick to the intent sentence.
+Like, say:
+
+What is the status of Alpha?
+
+instead of:
+
+What is the status of Alpha train?
+
+The extra word "train" at the end of the sentence might confuse Alexa.
+
+Meanwhile, it has been almost one year since the initial release and there is a great chance that Amazon updated their SDK.
+Thus, we might be able to find a better way to deal with the alphabet recognition issue and the user experience could be significantly improved.
+
+Will keep you posted! Thank you again for using the app!
+
+1/5/2016 Version 1.0
+
 New York City subway system is not reliable sometimes, so ask Alexa before you head to the station!
 You can ask me New York City subway status. Like:
 What is the status of 7?
@@ -37,12 +75,16 @@ N for November.
 Q for Quebec.
 R for Romeo.
 S for Sierra.
+W for Whiskey.
 Z for Zulu.
 Also, you may say Shuttle for S train. 
 And, please say the full name: Staten Island Rail, not S. I. R., for Staten Island Rail.
 
 We hope this Alexa skill helps you commute. If you encounter problems, please do not hesitate to contact us:
 info@speedyllama.com
+
+For other projects made by Speedy Llama, please visit:
+https://www.speedyllama.com/
 
 Thank you!
 
@@ -130,6 +172,7 @@ quebec
 romeo
 shuttle
 sierra
+whiskey
 zulu
 staten island rail
 

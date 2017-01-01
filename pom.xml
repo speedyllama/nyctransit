@@ -4,7 +4,7 @@
   <groupId>speedy-llama-alexa-skills</groupId>
   <artifactId>nyc-transit-alexa-skill</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>NYC Transit Alexa Skill</name>
 
   <repositories>

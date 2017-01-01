@@ -25,6 +25,7 @@ public class TestStatusParser {
 	}
 	
 	@Test
+	// TODO: this is an old test that does not have "W" train.
 	public void testParserOveral() throws MTAStatusException {
 		Map<String, Status> statusMap = parser.parse(fetcher.fetchXML(getClass().getResource("/xmls/20151217T2257.xml").toString()));
 		assertGoodService("1|2|3|4|5|6|7|A|C|B|J|Z|L|N|Q|R|S|SIR", statusMap);
