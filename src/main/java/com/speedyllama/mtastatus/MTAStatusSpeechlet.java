@@ -178,6 +178,7 @@ public class MTAStatusSpeechlet implements Speechlet {
 					"Q for Quebec. " + 
 					"R for Romeo. " + 
 					"S for Sierra. " + 
+					"W for Whiskey. " + 
 					"Z for Zulu. ";
 			SpeechletResponse response = responseText(
 					"Here are NATO phonetic alphabets. " + 
